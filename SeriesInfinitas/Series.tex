@@ -6,7 +6,7 @@
 % =======================================================
 % =======	ALL COMMANDS AND RULES FOR DOC 	 ============
 % =======================================================
-\documentclass[12pt]{article}							    %Type of docuemtn and size of font
+\documentclass[12pt]{report}							    %Type of docuemtn and size of font
 \usepackage[margin=1.2in]{geometry}							%Margins
 
 \usepackage[spanish]{babel}									%Please use spanish
@@ -68,377 +68,467 @@
 
 \end{titlepage}
 
-
-
+% =====================================================
+% ========                INDICE              =========
+% =====================================================
+\tableofcontents{}
+\clearpage
 
 % ======================================================================================
 % ==================================     SERIES    =====================================
 % ======================================================================================
+\chapter{Tipos de Series}
+    \clearpage
 
-% =====================================================
-% ========              SERIES - P            =========
-% =====================================================
-\section{Series P: La Madre de todas las Armonicas}
-Es una generalización de las series armonicas, de la forma:
+    % =====================================================
+    % ========              SERIES - P            =========
+    % =====================================================
+    \section{Series Geométricas}
+        Son series del estilo $a + ar + ar^2 + ar^3 + \cdots$, podemos
+        generalizarlas como:
 
-\begin{equation}
-    \sum_{n=1}^{\infty} \frac{1}{n^P}
-\end{equation}
+        \begin{equation}
+            \sum_{n=1}^{\infty} ar^{n-1} = \sum_{n=0}^{\infty} ar^n 
+        \end{equation}
 
-\textbf{Recuerda:}
-\begin{itemize}
-    \item Cuando $p\leq1$ son las series armónicas (La cual diverge).
-    \item Y tambien podemos saber (por el criterio de la integral) que para cualquiera $p>1$ la serie converge.
-\end{itemize}
+        \textbf{Recuerda:}
+        Podemos saber facilmente si converge o no, solo basta con que $|r| < 1$ 
+        para estar seguros de que converge, donde podemos encontrar a que convege
+        también muy fácil como:
 
+        \begin{equation}
+            \sum_{n=1}^{\infty} ar^{n-1} = \frac{a}{1-r}
+        \end{equation}
 
-% =====================================================
-% ========          SERIES ALTERNANTES          =======
-% =====================================================
-\clearpage
-\section{Series Alternantes}
+        De no ser así, es decir, si $|r| \geq 1$ podemos estar seguros de que diverge.
 
 
-% ==========================
-% ==== EXPLICACION =========
-% ==========================
-\subsection{¿Qué es?}
-Son un tipo de serie muy especial en la cual el signo cambia con cada termino. Las llamamos como serie alternante porque sus terminos alternan entre positivos y negativos.
 
-Podemos ver aquí que hay dos tipos de Series Alternantes:
-\begin{itemize}
-    \item Si empezamos con números positivos es del tipo $\sum_{n=1}^{\infty} (-1)^{n-1} b_n$
-    \item Si empezamos con números negativos es del tipo $\sum_{n=1}^{\infty} (-1)^n b_n$
-\end{itemize}
+    % =====================================================
+    % ========              SERIES - P            =========
+    % =====================================================
+    \clearpage
+    \section{Series P: La Madre de todas las Armónicas}
+        Para empezar hay que recordar que hay una serie muy famosa que se conoce como
+        la Serie Armónica:
+        \begin{equation}
+            \sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2}  + \frac{1}{3} + \cdots
+        \end{equation}
 
-Donde es bastante obvio que $b_n = |a_n|$
+        Podemos entonces hablar de las Series P, que es una generalización de las series
+        armonicas, de la forma:
+
+        \begin{equation}
+            \sum_{n=1}^{\infty} \frac{1}{n^P}
+        \end{equation}
+
+        \textbf{Recuerda:}
+        \begin{itemize}
+            \item Cuando $p\leq1$ es la serie armónica (La cual diverge).
+            \item Y tambien podemos saber (por el criterio de la integral) que para
+            cualquiera $p > 1$ la serie converge.
+        \end{itemize}
+
+
+    % =====================================================
+    % ========          SERIES TELESCOPICAS         =======
+    % =====================================================
+    \clearpage
+    \section{Series Telescópicas}
+
+        Las series telescópicas son muy lindas, para empezar lo que tenemos que
+        hacer es ver que la Serie (Suma de todos los elementos de la Sucesión)
+        tiene esta forma:
+
+        \begin{equation}
+            \sum_{n=1}^{\infty} b_n = (b_1-b_2) + (b_2-b_3) +  \cdots + (b_n-b_{n+1})
+        \end{equation}
+
+        O de manera mas concreta como:
+        \begin{equation}
+            \sum_{n=1}^{\infty} (b_{n} - b_{n+1})
+        \end{equation}
+
+        Y si te das cuenta todo eso se cancela, menos dos elementos, por lo podemos
+        escribir así:
+        \begin{equation}
+            S_n = b_1 - b_{n+1}
+        \end{equation}
+
+        Y por lo tanto podemos ver que la serie (el límite de n en el
+        infinito de las sumas parciales) es:
+
+        \begin{equation}
+            \sum_{n=1}^{\infty} b_n =  b_1 - \lim_{n \to \infty} b_{n+1}
+        \end{equation}
+
+
+
+
+    % =====================================================
+    % ========          SERIES ALTERNANTES          =======
+    % =====================================================
+    \clearpage
+    \section{Series Alternantes}
+
+        Son un tipo de serie muy especial en la cual el signo cambia con cada
+        termino. Las llamamos como serie alternante porque sus terminos alternan
+        entre positivos y negativos.
+
+        Podemos ver aquí que hay dos tipos de Series Alternantes:
+        \begin{itemize}
+            \item Si empezamos con números positivos es del tipo
+                $\sum_{n=1}^{\infty} (-1)^{n-1} b_n$
+            
+            \item Si empezamos con números negativos es del tipo
+            $\sum_{n=1}^{\infty} (-1)^n b_n$
+        \end{itemize}
+
+        Donde es bastante obvio que $b_n = |a_n|$
 
 
 
 % ======================================================================================
 % ===============================   CRITERIOS      =====================================
 % ======================================================================================
-
-% =====================================================
-% ========       PRUEBA DE LA INTEGRAL        =========
-% =====================================================
 \clearpage
-\section{Prueba de la Integral}
-Suponga que f es una función:
+\chapter{Criterios en Series}
 
-\begin{itemize}
-    \item Continua
-    \item Positiva
-    \item Decreciente en $[1, \infty)$
-\end{itemize}
+    % =====================================================
+    % ========       PRUEBA DE DIVERGENCIA        =========
+    % =====================================================
+    \clearpage
+    \section{Prueba de la Divergencia}
+    Esta es muy clásica y es muy fácil primero ahcer esta antes
+    de hacer nada más:
 
-y sea $a_n = f(n)$
+    \begin{itemize}
+        \item \textbf{Original} Si la Serie $\sum_{n=1}^{\infty} a_n$ es
+        convergente entonces $\lim_{n \to \infty} a_n = 0$
 
-Entonces este criterio nos dira que:
-\begin{itemize}
-   \item Si $\int _1^{\infty}f(x) dx$ es convergente, entonces $\sum_{n=1}^{\infty} a_n$ es convergente
-   \item Si $\int _1^{\infty}f(x) dx$ es divergente, entonces $\sum_{n=1}^{\infty} a_n$ es divergente
-\end{itemize}
+        \item \textbf{ContraPositiva} Si $\lim_{n \to \infty} a_n \neq 0$ entonces la Serie es Divergente.
+    \end{itemize}
 
+    % =====================================================
+    % ========       PRUEBA DE LA INTEGRAL        =========
+    % =====================================================
+    \clearpage
+    \section{Prueba de la Integral}
+    Suponga que f es una función:
 
+    \begin{itemize}
+        \item Continua
+        \item Positiva
+        \item Decreciente en $[1, \infty)$
+    \end{itemize}
 
+    y sea $a_n = f(n)$
 
+    Entonces este criterio nos dira que:
+    \begin{itemize}
+       \item Si $\int _1^{\infty}f(x) dx$ es convergente, entonces $\sum_{n=1}^{\infty} a_n$ es convergente
+       \item Si $\int _1^{\infty}f(x) dx$ es divergente, entonces $\sum_{n=1}^{\infty} a_n$ es divergente
+    \end{itemize}
 
-% =====================================================
-% ========   CRITERIO DE COMPARACION DIRECTA  =========
-% =====================================================
-\clearpage
-\section{Criterio de Comparación: Directa}
 
 
-% ==========================
-% ==== EXPLICACION =========
-% ==========================
-\subsection{¿Qué es?}
-Supón que $a _n > 0$ y que también $b_n > 0$. Osea que ambos terminos siempre seran positivos.
-Entonces:
 
-\begin{itemize}
-    \item Si $\Sigma b_n$ es convergente y $a_n \leq b_n$, entonces $a_n$ es convergente. 
-    \item Si $\Sigma b_n$ es divergente y $a_n \geq b_n$, entonces $a_n$ es divergente. 
-\end{itemize}
 
-Naturalmente, al usar la prueba por comparación es necesario tener alguna serie conocida $\Sigma b_n$ para los fines de la comparación. La mayor parte de las veces se usan las series:
+    % =====================================================
+    % ========   CRITERIO DE COMPARACION DIRECTA  =========
+    % =====================================================
+    \clearpage
+    \section{Criterio de Comparación: Directa}
 
-\begin{itemize}
-    \item Series P: $\Sigma \frac{1}{n^p}$ que convergen si $p>1$ y divergen si $p\leq 1$
-    \item Series P: $\Sigma ar^{n-1}$ que convergen si $|r|<1$ y divergen si $|r|\geq 1$
-\end{itemize}
 
-La condición $a_n \leq b_n$ o bien, $a_n \geq b_n$ de la prueba por comparación es para toda n, es necesario comprobar sólo que se cumple para $n \geq N$, donde N es un entero establecido, porque la convergencia de una serie no está afectada por un número finito de términos.
-% ==========================
-% ====    EJEMPLO  =========
-% ==========================
-\subsection{Ejemplo 1}
-Busquemos si la siguiente Serie diverge o converge:
+    % ==========================
+    % ==== EXPLICACION =========
+    % ==========================
+    \subsection{¿Qué es?}
+    Supón que $a _n > 0$ y que también $b_n > 0$. Osea que ambos terminos siempre seran positivos.
+    Entonces:
 
-\begin{equation*}
-    \sum_{n=1}^{\infty} \frac{5}{2n^2 +4n +3}
-\end{equation*}
+    \begin{itemize}
+        \item Si $\Sigma b_n$ es convergente y $a_n \leq b_n$, entonces $a_n$ es convergente. 
+        \item Si $\Sigma b_n$ es divergente y $a_n \geq b_n$, entonces $a_n$ es divergente. 
+    \end{itemize}
 
-Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+    Naturalmente, al usar la prueba por comparación es necesario tener alguna serie conocida $\Sigma b_n$ para los fines de la comparación. La mayor parte de las veces se usan las series:
 
-\begin{equation*}
-    \sum b_n = \sum_{n=1}^{\infty} \frac{5}{2n^2} = \frac{5}{2}\sum_{n=1}^{\infty} \frac{1}{n^2}
-\end{equation*}
+    \begin{itemize}
+        \item Series P: $\Sigma \frac{1}{n^p}$ que convergen si $p>1$ y divergen si $p\leq 1$
+        \item Series P: $\Sigma ar^{n-1}$ que convergen si $|r|<1$ y divergen si $|r|\geq 1$
+    \end{itemize}
 
-Bueno, podemos decir que:
-\begin{equation*}
-    \frac{5}{2n^2 +4n +3} < \frac{5}{2n^2}
-\end{equation*}
-Simplemente por el denominador.
+    La condición $a_n \leq b_n$ o bien, $a_n \geq b_n$ de la prueba por comparación es para toda n, es necesario comprobar sólo que se cumple para $n \geq N$, donde N es un entero establecido, porque la convergencia de una serie no está afectada por un número finito de términos.
+    % ==========================
+    % ====    EJEMPLO  =========
+    % ==========================
+    \subsection{Ejemplo 1}
+    Busquemos si la siguiente Serie diverge o converge:
+
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{5}{2n^2 +4n +3}
+    \end{equation*}
+
+    Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+
+    \begin{equation*}
+        \sum b_n = \sum_{n=1}^{\infty} \frac{5}{2n^2} = \frac{5}{2}\sum_{n=1}^{\infty} \frac{1}{n^2}
+    \end{equation*}
 
-Y veamos que todo se cumplio, ademas sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea. :D
+    Bueno, podemos decir que:
+    \begin{equation*}
+        \frac{5}{2n^2 +4n +3} < \frac{5}{2n^2}
+    \end{equation*}
+    Simplemente por el denominador.
 
+    Y veamos que todo se cumplio, ademas sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea. :D
 
 
-% =====================================================
-% ========   CRITERIO DE COMPARACION LIMITE   =========
-% =====================================================
-\clearpage
-\section{Criterio de Comparación: Limites}
 
+    % =====================================================
+    % ========   CRITERIO DE COMPARACION LIMITE   =========
+    % =====================================================
+    \clearpage
+    \section{Criterio de Comparación: Limites}
 
-% ==========================
-% ==== EXPLICACION =========
-% ==========================
-\subsection{¿Qué es?}
-Supón que $a _n > 0$ y que también $b_n > 0$. Osea que ambos terminos siempre seran positivos.
 
-Entonces si:
-$\lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = L$
+    % ==========================
+    % ==== EXPLICACION =========
+    % ==========================
+    \subsection{¿Qué es?}
+    Supón que $a _n > 0$ y que también $b_n > 0$. Osea que ambos terminos siempre seran positivos.
 
-(Donde obviamente L debe ser positivo y finito)
+    Entonces si:
+    $\lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = L$
 
-Si todo esto se cumple entonces alguna de las dos proposiciones deben ser verdad:
-\begin{itemize}
-    \item Ambas $\Sigma a_n$ y $\Sigma b_n$ divergen.
-    \item Ambas $\Sigma a_n$ y $\Sigma b_n$ convergen.
-\end{itemize}
+    (Donde obviamente L debe ser positivo y finito)
 
-\cite{Sitio1}
+    Si todo esto se cumple entonces alguna de las dos proposiciones deben ser verdad:
+    \begin{itemize}
+        \item Ambas $\Sigma a_n$ y $\Sigma b_n$ divergen.
+        \item Ambas $\Sigma a_n$ y $\Sigma b_n$ convergen.
+    \end{itemize}
 
-% ==========================
-% ====    EJEMPLO  =========
-% ==========================
-\subsection{Ejemplo 1}
-Busquemos si la siguiente Serie diverge o converge:
-
-\begin{equation*}
-    \sum_{n=1}^{\infty} \frac{3n^2+2}{(n^2-5)^2}
-\end{equation*}
-
-Antes que hacer nada, lo mejor es expandir:
-\begin{equation*}
-    \sum_{n=1}^{\infty} \frac{3n^2+2}{n^4-10n^2+25}
-\end{equation*}
- 
-Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo):
-\begin{equation*}
-    \lim_{n \to \infty} \frac{3n^2+2}{n^4-10n^2+25} = ?
-\end{equation*}
+    \cite{Sitio1}
 
-Esto lo podemos calcular de muchas maneras, por ejemplo:
-\begin{equation*}
-    \lim_{n \to \infty} \frac{ \frac{3n^2}{n^4} +\frac{2}{n^4}  }{ 1 - \frac{10n^2}{n^4} + \frac{25}{n^4} } = \frac{0}{1+0} = 0
-\end{equation*}
+    % ==========================
+    % ====    EJEMPLO  =========
+    % ==========================
+    \subsection{Ejemplo 1}
+    Busquemos si la siguiente Serie diverge o converge:
 
-Ok, paso esa prueba, lamentablemente esto no es
-suficiente para probar que converge.
-Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{3n^2+2}{(n^2-5)^2}
+    \end{equation*}
 
-\begin{equation*}
-    \sum b_n = \sum_{n=1}^{\infty} \frac{n^2}{n^4} = \sum_{n=1}^{\infty} \frac{1}{n^2}
-\end{equation*}
+    Antes que hacer nada, lo mejor es expandir:
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{3n^2+2}{n^4-10n^2+25}
+    \end{equation*}
+     
+    Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo):
+    \begin{equation*}
+        \lim_{n \to \infty} \frac{3n^2+2}{n^4-10n^2+25} = ?
+    \end{equation*}
 
-Ahora aplicando lo que acabamos de ver:
-\begin{equation*}
-    \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3n^2+2}{n^4-10n^2+25} }{ \frac{1}{n^2} } \right) =  \left( \frac{3n^4+2n^2}{n^4-10n^2+25} \right) = 3
-\end{equation*}
+    Esto lo podemos calcular de muchas maneras, por ejemplo:
+    \begin{equation*}
+        \lim_{n \to \infty} \frac{ \frac{3n^2}{n^4} +\frac{2}{n^4}  }{ 1 - \frac{10n^2}{n^4} + \frac{25}{n^4} } = \frac{0}{1+0} = 0
+    \end{equation*}
 
-Y veamos que todo se cumplio, 3 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea. :D
+    Ok, paso esa prueba, lamentablemente esto no es
+    suficiente para probar que converge.
+    Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
 
+    \begin{equation*}
+        \sum b_n = \sum_{n=1}^{\infty} \frac{n^2}{n^4} = \sum_{n=1}^{\infty} \frac{1}{n^2}
+    \end{equation*}
 
-% ==========================
-% ====    EJEMPLO  =========
-% ==========================
-\subsection{Ejemplo 2}
-Busquemos si la siguiente Serie diverge o converge:
+    Ahora aplicando lo que acabamos de ver:
+    \begin{equation*}
+        \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3n^2+2}{n^4-10n^2+25} }{ \frac{1}{n^2} } \right) =  \left( \frac{3n^4+2n^2}{n^4-10n^2+25} \right) = 3
+    \end{equation*}
 
-\begin{equation*}
-    \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k+7}
-\end{equation*}
- 
-Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo):
-\begin{equation*}
-    \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = ?
-\end{equation*}
+    Y veamos que todo se cumplio, 3 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea. :D
 
-Esto lo podemos calcular de muchas maneras, por ejemplo:
-\begin{equation*}
-    \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = \frac{ \frac{n^{k-1}}{n^k} }{1+\frac{7}{n^k}} = \frac{0}{1+0} = 0
-\end{equation*}
 
-Ok, paso esa prueba, lamentablemente esto no es suficiente para probar que converge, es más parece que debería diverger, así que probemos para eso:
+    % ==========================
+    % ====    EJEMPLO  =========
+    % ==========================
+    \subsection{Ejemplo 2}
+    Busquemos si la siguiente Serie diverge o converge:
 
-Ahora apliquemos el criterio de comparación, podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k+7}
+    \end{equation*}
+     
+    Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo):
+    \begin{equation*}
+        \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = ?
+    \end{equation*}
 
-\begin{equation*}
-    \sum b_n = \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k} = \sum_{n=1}^{\infty} \frac{1}{n}
-\end{equation*}
+    Esto lo podemos calcular de muchas maneras, por ejemplo:
+    \begin{equation*}
+        \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = \frac{ \frac{n^{k-1}}{n^k} }{1+\frac{7}{n^k}} = \frac{0}{1+0} = 0
+    \end{equation*}
 
-Sabemos que esta serie diverge.
+    Ok, paso esa prueba, lamentablemente esto no es suficiente para probar que converge, es más parece que debería diverger, así que probemos para eso:
 
-Ahora aplicando lo que acabamos de ver:
-\begin{equation*}
-    \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{n^{k-1}}{n^k+7} }{ \frac{1}{n} } \right) =  \left( \frac{n^k}{n^k+7} \right) = 1
-\end{equation*}
+    Ahora apliquemos el criterio de comparación, podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
 
-Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n}$ es divergente, entonces es seguro que la serie original que teniamos tambien lo es :D
+    \begin{equation*}
+        \sum b_n = \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k} = \sum_{n=1}^{\infty} \frac{1}{n}
+    \end{equation*}
 
+    Sabemos que esta serie diverge.
 
-% ==========================
-% ====    EJEMPLO  =========
-% ==========================
-\subsection{Ejemplo 3}
-Busquemos si la siguiente Serie diverge o converge:
+    Ahora aplicando lo que acabamos de ver:
+    \begin{equation*}
+        \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{n^{k-1}}{n^k+7} }{ \frac{1}{n} } \right) =  \left( \frac{n^k}{n^k+7} \right) = 1
+    \end{equation*}
 
-\begin{equation*}
-    \sum_{n=1}^{\infty} \frac{3^n+2}{4^n-1}
-\end{equation*}
+    Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n}$ es divergente, entonces es seguro que la serie original que teniamos tambien lo es :D
 
-Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo). Esto se calcula muy facilmente porque el demoni- nador crece mucho mas rapidamente
 
-\begin{equation*}
-    \lim_{n \to \infty}  \frac{3^n+2}{4^n-1} = 0
-\end{equation*}
+    % ==========================
+    % ====    EJEMPLO  =========
+    % ==========================
+    \subsection{Ejemplo 3}
+    Busquemos si la siguiente Serie diverge o converge:
 
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{3^n+2}{4^n-1}
+    \end{equation*}
 
-Ok, paso esa prueba, lamentablemente esto no es
-suficiente para probar que converge.
-Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+    Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo). Esto se calcula muy facilmente porque el demoni- nador crece mucho mas rapidamente
 
-\begin{equation*}
-    \sum b_n = \sum_{n=1}^{\infty} \frac{3^n}{4^n} = \sum_{n=1}^{\infty} \left( \frac{3}{4} \right)^n 
-\end{equation*}
+    \begin{equation*}
+        \lim_{n \to \infty}  \frac{3^n+2}{4^n-1} = 0
+    \end{equation*}
 
-Esto es una serie geometrica que converge, pues $|r| < 1$
 
-Ahora aplicando lo que acabamos de ver:
-\begin{equation*}
-    \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3^n+2}{4^n-1} }{ \left( \frac{3}{4} \right)^n  } \right) =  \left( \frac{12^n + 2 \cdot 4^n}{12^n -3^n} \right) = \left( \frac{1 + 2 (\frac{1}{3})^n}{1 +  (\frac{1}{4})^n} \right) = 1
-\end{equation*}
+    Ok, paso esa prueba, lamentablemente esto no es
+    suficiente para probar que converge.
+    Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
 
-Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma (\frac{3}{4})^n$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea :D
+    \begin{equation*}
+        \sum b_n = \sum_{n=1}^{\infty} \frac{3^n}{4^n} = \sum_{n=1}^{\infty} \left( \frac{3}{4} \right)^n 
+    \end{equation*}
 
+    Esto es una serie geometrica que converge, pues $|r| < 1$
 
+    Ahora aplicando lo que acabamos de ver:
+    \begin{equation*}
+        \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3^n+2}{4^n-1} }{ \left( \frac{3}{4} \right)^n  } \right) =  \left( \frac{12^n + 2 \cdot 4^n}{12^n -3^n} \right) = \left( \frac{1 + 2 (\frac{1}{3})^n}{1 +  (\frac{1}{4})^n} \right) = 1
+    \end{equation*}
 
-% =====================================================
-% ========       CRITERIO DE LA RAZON           =======
-% =====================================================
-\section{Criterio de la Rázon}
+    Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma (\frac{3}{4})^n$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea :D
 
-Sea una $\Sigma a_n$ una series de términos positivos, tal que:
 
-\begin{equation}
-    \lim_{n \to \infty} \frac{a_n+1}{a_n} = L
-\end{equation}
 
-Entonces:
-\begin{itemize}
-    \item $L < 1$ : La Serie Converge
-    \item $L > 1$ : La Serie Diverge
-    \item $L = 1$ : No nos dirá nada (cualquier serie P nos dará 1)
-\end{itemize}
+    % =====================================================
+    % ========       CRITERIO DE LA RAZON           =======
+    % =====================================================
+    \section{Criterio de la Rázon}
 
-Pero si que podemos llegar a algo más:
-Si L da uno, podemos aplicar L' Hopital y volver a comprobar:
+    Sea una $\Sigma a_n$ una series de términos positivos, tal que:
 
-\begin{equation}
-\frac{\frac{d}{dn} (a_{n+1})}{\frac{d}{dn} (a_n)} = L
-\end{equation}
+    \begin{equation}
+        \lim_{n \to \infty} \frac{a_n+1}{a_n} = L
+    \end{equation}
 
+    Entonces:
+    \begin{itemize}
+        \item $L < 1$ : La Serie Converge
+        \item $L > 1$ : La Serie Diverge
+        \item $L = 1$ : No nos dirá nada (cualquier serie P nos dará 1)
+    \end{itemize}
 
+    Pero si que podemos llegar a algo más:
+    Si L da uno, podemos aplicar L' Hopital y volver a comprobar:
 
-% ==========================
-% ====    EJEMPLO  =========
-% ==========================
-\subsection{Ejemplo 1}
-Busquemos si la siguiente Serie diverge o converge:
+    \begin{equation}
+    \frac{\frac{d}{dn} (a_{n+1})}{\frac{d}{dn} (a_n)} = L
+    \end{equation}
 
-\begin{equation*}
-    \sum_{n=1}^{\infty} \frac{2^n}{n^2}
-\end{equation*}
 
-Probemos entonces la razón:
-\begin{equation*}
-    \frac{ \frac{2^n}{n^2} }{ \frac{2 \cdot 2^n}{(n+1)^2 } } = \frac{ \frac{2^n}{n^2} }{ 2 \frac{2^n}{n^2 + 2n + 1} }
-\end{equation*}
 
+    % ==========================
+    % ====    EJEMPLO  =========
+    % ==========================
+    \subsection{Ejemplo 1}
+    Busquemos si la siguiente Serie diverge o converge:
 
+    \begin{equation*}
+        \sum_{n=1}^{\infty} \frac{2^n}{n^2}
+    \end{equation*}
 
-% =====================================================
-% ========       CRITERIO DE LAS ALTERNANTES    =======
-% =====================================================
-\clearpage
-\section{Criterio de las Series Alternantes}
+    Probemos entonces la razón:
+    \begin{equation*}
+        \frac{ \frac{2^n}{n^2} }{ \frac{2 \cdot 2^n}{(n+1)^2 } } = \frac{ \frac{2^n}{n^2} }{ 2 \frac{2^n}{n^2 + 2n + 1} }
+    \end{equation*}
 
-Para probar que una Serie Alternante $\sum_{n=1}^{\infty} (-1)^{n-1} b_n$ y $\sum_{n=1}^{\infty} (-1)^n b_n$ es convergente entonces tendrá que cumplir que:
 
-\begin{itemize}
-    \item $\{b_n\}$ es una sucesión decreciente, es decir, $b_n \geq b_{n+1}$ para $n$ suficientemente grande, 
-    \item Que $\lim_{n \to \infty} b_n = 0$
-\end{itemize}
 
-Una observación es que este criterio solo sirve para demostrar convergencia, es decir, si alguna de las dos condiciones no se cumple sobre la serie alternante, no podemos concluir nada y será necesario usar otro criterio.
+    % =====================================================
+    % ========       CRITERIO DE LAS ALTERNANTES    =======
+    % =====================================================
+    \clearpage
+    \section{Criterio de las Series Alternantes}
 
-% ==========================
-% ====    EJEMPLO  =========
-% ==========================
-\subsection{Ejemplo 1}
-Una sencilla para encaminarnos:
-\begin{equation*}
-    \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n}
-\end{equation*}
+    Para probar que una Serie Alternante $\sum_{n=1}^{\infty} (-1)^{n-1} b_n$ y $\sum_{n=1}^{\infty} (-1)^n b_n$ es convergente entonces tendrá que cumplir que:
 
+    \begin{itemize}
+        \item $\{b_n\}$ es una sucesión decreciente, es decir, $b_n \geq b_{n+1}$ para $n$ suficientemente grande, 
+        \item Que $\lim_{n \to \infty} b_n = 0$
+    \end{itemize}
 
- \begin{itemize}
-    \item Paso 1: Limite $\lim_{n \to \infty} \frac{1}{n}=0$
-    \item Paso 2: ¿Es Decreciente? $\frac{1}{n}-\frac{1}{n+1} \geq 0 $
- \end{itemize}
+    Una observación es que este criterio solo sirve para demostrar convergencia, es decir, si alguna de las dos condiciones no se cumple sobre la serie alternante, no podemos concluir nada y será necesario usar otro criterio.
 
-Como es verdadero entonces esta suma es convergente.
+    % ==========================
+    % ====    EJEMPLO  =========
+    % ==========================
+    \subsection{Ejemplo 1}
+    Una sencilla para encaminarnos:
+    \begin{equation*}
+        \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n}
+    \end{equation*}
 
 
+     \begin{itemize}
+        \item Paso 1: Limite $\lim_{n \to \infty} \frac{1}{n}=0$
+        \item Paso 2: ¿Es Decreciente? $\frac{1}{n}-\frac{1}{n+1} \geq 0 $
+     \end{itemize}
 
+    Como es verdadero entonces esta suma es convergente.
 
 
-% =====================================================
-% ========       CONVERGENCIA ABSOLUTA          =======
-% =====================================================
-\clearpage
-\section{Convergencia Absoluta}
 
-Sea $\{a_n\}$ una sucesión:
 
-\begin{itemize}
-    \item Decimos que la serie $\sum_{n=1}^{\infty} a_n$ es \emph{Absolutamente Convergente} si la serie $\sum_{n=1}^{\infty} |a_n|$ converge.
 
-    \item Si la serie $\sum_{n=1}^{\infty} a_n$ converge pero la serie $\sum_{n=1}^{\infty} |a_n|$ diverge, decimos que la serie es \emph{Condicionalmente Convergente}.
-\end{itemize}
+    % =====================================================
+    % ========       CONVERGENCIA ABSOLUTA          =======
+    % =====================================================
+    \clearpage
+    \section{Convergencia Absoluta}
 
-Podemos crear un Teorema muy interesante:
-Si $\sum_{n=1}^{\infty} a_n$ es absolutamente convergente, entonces también es convergente.
+    Sea $\{a_n\}$ una sucesión:
 
-El Teorema anterior es muy útil, ya que garantiza que una serie absolutamente convergente es convergente.
-Sin embargo, su recíproco no es necesariamente cierto: Las series que son Convergentes pueden o no ser Absolutamente Convergentes. 
+    \begin{itemize}
+        \item Decimos que la serie $\sum_{n=1}^{\infty} a_n$ es \emph{Absolutamente Convergente} si la serie $\sum_{n=1}^{\infty} |a_n|$ converge.
 
-El ejemplo más famoso es la serie cuyo $n$-ésimo término es $a_n=\dfrac{(-1)^{n-1}}{n}$, ya que $\sum_{n=1}^{\infty}a_n$ converge por el teorema anterior, pero $\sum_{n=1}^{\infty} |a_n| = \sum_{n=1}^{\infty} \frac{1}{n}$ diverge por el criterio de las Series P.
+        \item Si la serie $\sum_{n=1}^{\infty} a_n$ converge pero la serie $\sum_{n=1}^{\infty} |a_n|$ diverge, decimos que la serie es \emph{Condicionalmente Convergente}.
+    \end{itemize}
+
+    Podemos crear un Teorema muy interesante:
+    Si $\sum_{n=1}^{\infty} a_n$ es absolutamente convergente, entonces también es convergente.
+
+    El Teorema anterior es muy útil, ya que garantiza que una serie absolutamente convergente es convergente.
+    Sin embargo, su recíproco no es necesariamente cierto: Las series que son Convergentes pueden o no ser Absolutamente Convergentes. 
+
+    El ejemplo más famoso es la serie cuyo $n$-ésimo término es $a_n=\dfrac{(-1)^{n-1}}{n}$, ya que $\sum_{n=1}^{\infty}a_n$ converge por el teorema anterior, pero $\sum_{n=1}^{\infty} |a_n| = \sum_{n=1}^{\infty} \frac{1}{n}$ diverge por el criterio de las Series P.
 
 
 
