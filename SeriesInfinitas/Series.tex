@@ -81,7 +81,7 @@
     \clearpage
 
     % =====================================================
-    % ========              SERIES - P            =========
+    % ========         SERIES GEOMETRICAS           =======
     % =====================================================
     \section{Series Geométricas}
         Son series del estilo $a + ar + ar^2 + ar^3 + \cdots$, podemos
@@ -187,6 +187,29 @@
         Donde es bastante obvio que $b_n = |a_n|$
 
 
+    \subsection{Estimación para Series Alternas}
+        Una suma parcial de de cualquier serie convergente se puede usar como una
+        aproximación a una suma total, pero no es muy utilizado, a menos que estime
+        la exactitud de la aproximación.
+
+        Esto es de verdad muy útil con las Series Alternantes, supongamos una Serie
+        convergente, donde podemos escribir la Suma Parcial como $S = \sum (-1)^{n-1}b_n$
+        que cumple con que:
+        \begin{itemize}
+            \item $ 0 \leq b_{n+1} \leq b_n$
+            \item $ \lim_{n \to \infty} b_n = 0$
+        \end{itemize}
+
+        Entonces podemos decir que nuestra estimación será:
+        \begin{equation}
+            |R_n| = |S - S_n| \leq b_{n+1}
+        \end{equation}
+
+
+
+
+
+
 
 % ======================================================================================
 % ===============================   CRITERIOS      =====================================
@@ -226,8 +249,8 @@
 
     Entonces este criterio nos dira que:
     \begin{itemize}
-       \item Si $\int _1^{\infty}f(x) dx$ es convergente, entonces $\sum_{n=1}^{\infty} a_n$ es convergente
-       \item Si $\int _1^{\infty}f(x) dx$ es divergente, entonces $\sum_{n=1}^{\infty} a_n$ es divergente
+       \item Si $\int_1^{\infty}f(x) dx$ es convergente, entonces $\sum_{n=1}^{\infty} a_n$ es convergente
+       \item Si $\int_1^{\infty}f(x) dx$ es divergente, entonces $\sum_{n=1}^{\infty} a_n$ es divergente
     \end{itemize}
 
 
@@ -438,6 +461,7 @@
     % =====================================================
     % ========       CRITERIO DE LA RAZON           =======
     % =====================================================
+    \clearpage
     \section{Criterio de la Rázon}
 
     Sea una $\Sigma a_n$ una series de términos positivos, tal que:
@@ -488,8 +512,8 @@
     Para probar que una Serie Alternante $\sum_{n=1}^{\infty} (-1)^{n-1} b_n$ y $\sum_{n=1}^{\infty} (-1)^n b_n$ es convergente entonces tendrá que cumplir que:
 
     \begin{itemize}
-        \item $\{b_n\}$ es una sucesión decreciente, es decir, $b_n \geq b_{n+1}$ para $n$ suficientemente grande, 
-        \item Que $\lim_{n \to \infty} b_n = 0$
+        \item $\{b_n\}$ es una sucesión decreciente, es decir, $b_n \geq b_{n+1}$ para $n$ suficientemente grande
+        \item Que el $\lim_{n \to \infty} b_n = 0$
     \end{itemize}
 
     Una observación es que este criterio solo sirve para demostrar convergencia, es decir, si alguna de las dos condiciones no se cumple sobre la serie alternante, no podemos concluir nada y será necesario usar otro criterio.
@@ -506,7 +530,7 @@
 
      \begin{itemize}
         \item Paso 1: Limite $\lim_{n \to \infty} \frac{1}{n}=0$
-        \item Paso 2: ¿Es Decreciente? $\frac{1}{n}-\frac{1}{n+1} \geq 0 $
+        \item Paso 2: ¿Es Decreciente? Es decir :$\frac{1}{n}-\frac{1}{n+1} \geq 0 $
      \end{itemize}
 
     Como es verdadero entonces esta suma es convergente.
