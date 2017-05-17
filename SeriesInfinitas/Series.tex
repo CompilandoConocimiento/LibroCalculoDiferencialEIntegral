@@ -1,3 +1,4 @@
+
 % ****************************************************************************************
 % ************************     	SERIES INFINITAS	  ************************************
 % ****************************************************************************************
@@ -220,6 +221,24 @@
         \begin{equation}
             |R_n| = |S - S_n| \leq b_{n+1}
         \end{equation}
+
+    \subsection{Convergencia Absoluta}
+
+        Sea $\{a_n\}$ una sucesión:
+
+        \begin{itemize}
+            \item Decimos que la serie $\sum_{n=1}^{\infty} a_n$ es \emph{Absolutamente Convergente} si la serie $\sum_{n=1}^{\infty} |a_n|$ converge.
+
+            \item Si la serie $\sum_{n=1}^{\infty} a_n$ converge pero la serie $\sum_{n=1}^{\infty} |a_n|$ diverge, decimos que la serie es \emph{Condicionalmente Convergente}.
+        \end{itemize}
+
+        Podemos crear un Teorema muy interesante:
+        Si $\sum_{n=1}^{\infty} a_n$ es absolutamente convergente, entonces también es convergente.
+
+        El Teorema anterior es muy útil, ya que garantiza que una serie absolutamente convergente es convergente.
+        Sin embargo, su recíproco no es necesariamente cierto: Las series que son Convergentes pueden o no ser Absolutamente Convergentes. 
+
+        El ejemplo más famoso es la serie cuyo $n$-ésimo término es $a_n=\dfrac{(-1)^{n-1}}{n}$, ya que $\sum_{n=1}^{\infty}a_n$ converge por el teorema anterior, pero $\sum_{n=1}^{\infty} |a_n| = \sum_{n=1}^{\infty} \frac{1}{n}$ diverge por el criterio de las Series P.
 
 
 
@@ -543,30 +562,6 @@
         Como es verdadero entonces esta suma es convergente.
 
 
-
-
-
-    % =====================================================
-    % ========       CONVERGENCIA ABSOLUTA          =======
-    % =====================================================
-    \clearpage
-    \section{Convergencia Absoluta}
-
-        Sea $\{a_n\}$ una sucesión:
-
-        \begin{itemize}
-            \item Decimos que la serie $\sum_{n=1}^{\infty} a_n$ es \emph{Absolutamente Convergente} si la serie $\sum_{n=1}^{\infty} |a_n|$ converge.
-
-            \item Si la serie $\sum_{n=1}^{\infty} a_n$ converge pero la serie $\sum_{n=1}^{\infty} |a_n|$ diverge, decimos que la serie es \emph{Condicionalmente Convergente}.
-        \end{itemize}
-
-        Podemos crear un Teorema muy interesante:
-        Si $\sum_{n=1}^{\infty} a_n$ es absolutamente convergente, entonces también es convergente.
-
-        El Teorema anterior es muy útil, ya que garantiza que una serie absolutamente convergente es convergente.
-        Sin embargo, su recíproco no es necesariamente cierto: Las series que son Convergentes pueden o no ser Absolutamente Convergentes. 
-
-        El ejemplo más famoso es la serie cuyo $n$-ésimo término es $a_n=\dfrac{(-1)^{n-1}}{n}$, ya que $\sum_{n=1}^{\infty}a_n$ converge por el teorema anterior, pero $\sum_{n=1}^{\infty} |a_n| = \sum_{n=1}^{\infty} \frac{1}{n}$ diverge por el criterio de las Series P.
 
 
 
