@@ -1,6 +1,6 @@
 
 % ****************************************************************************************
-% ************************     	SERIES INFINITAS	  ************************************
+% **********************  	SUCESIONES Y SERIES INFINITAS	  ****************************
 % ****************************************************************************************
 
 
@@ -53,11 +53,11 @@
 
 	% ============ NAME OF THE DOCUMENT  ============
 	\rule{\linewidth}{0.5mm} \\[1.0cm]
-		{ \huge \bfseries Series Infinitas}\\[1.0cm] 
+		{ \huge \bfseries Sucesiones y Series}\\[1.0cm] 
 	\rule{\linewidth}{0.5mm} \\[2.0cm]
 	
 	% ====== SEMI TITLE ==========
-	{\LARGE Análisis de Series Infinitas: Convergencia y Divergencia}\\[7cm] 
+	{\LARGE Análisis de Convergencia y Divergencia}\\[7cm] 
 	
 	% ============  MY INFORMATION  =================
 	\begin{center} \large
@@ -204,6 +204,12 @@
         Donde es bastante obvio que $b_n = |a_n|$
 
 
+        Recuerda que nuestra serie es convergente si cumple con lo siguiente:
+        \begin{itemize}
+            \item $ 0 \leq b_{n+1} \leq b_n$
+            \item $ \lim_{n \to \infty} b_n = 0$
+        \end{itemize}
+
     \subsection{Estimación para Series Alternas}
         Una suma parcial de de cualquier serie convergente se puede usar como una
         aproximación a una suma total, pero no es muy utilizado, a menos que estime
@@ -314,7 +320,7 @@
 
         \begin{itemize}
             \item Series P: $\Sigma \frac{1}{n^p}$ que convergen si $p>1$ y divergen si $p\leq 1$
-            \item Series P: $\Sigma ar^{n-1}$ que convergen si $|r|<1$ y divergen si $|r|\geq 1$
+            \item Series Geométricas: $\Sigma ar^{n-1}$ que convergen si $|r|<1$ y divergen si $|r|\geq 1$
         \end{itemize}
 
         La condición $a_n \leq b_n$ o bien, $a_n \geq b_n$ de la prueba por comparación es para toda n, es
@@ -493,14 +499,14 @@
         Sea una $\Sigma a_n$ una series de términos positivos, tal que:
 
         \begin{equation}
-            \lim_{n \to \infty} \frac{a_n+1}{a_n} = L
+            \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = L
         \end{equation}
 
         Entonces:
         \begin{itemize}
-            \item $L < 1$ : La Serie Converge
-            \item $L > 1$ : La Serie Diverge
-            \item $L = 1$ : No nos dirá nada (cualquier serie P nos dará 1)
+            \item $L < 1$ : La Serie es absolutamente converge
+            \item $L > 1$ : La Serie diverge
+            \item $L = 1$ : No nos dirá nada (por ejemplo cualquier serie P nos dará 1)
         \end{itemize}
 
         Pero si que podemos llegar a algo más:
