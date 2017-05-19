@@ -499,13 +499,13 @@
         Sea una $\Sigma a_n$ una series de términos positivos, tal que:
 
         \begin{equation}
-            \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = L
+            \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = L
         \end{equation}
 
         Entonces:
         \begin{itemize}
-            \item $L < 1$ : La Serie es absolutamente converge
-            \item $L > 1$ : La Serie diverge
+            \item $L < 1$ : La Serie es absolutamente convergente.
+            \item $L > 1$ ó $L = \infty$ : La Serie diverge.
             \item $L = 1$ : No nos dirá nada (por ejemplo cualquier serie P nos dará 1)
         \end{itemize}
 
@@ -513,7 +513,7 @@
         Si L da uno, podemos aplicar L' Hopital y volver a comprobar:
 
         \begin{equation}
-        \frac{\frac{d}{dn} (a_{n+1})}{\frac{d}{dn} (a_n)} = L
+        \left| \frac{\frac{d}{dn} (a_{n+1})}{\frac{d}{dn} (a_n)} \right| = L
         \end{equation}
 
 

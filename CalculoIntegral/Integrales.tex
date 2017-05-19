@@ -1,155 +1,179 @@
 % ****************************************************************************************
-% ************************     	NAME OF DOCUMENT	  ************************************
+% ************************      NAME OF DOCUMENT      ************************************
 % ****************************************************************************************
 
 
 % =======================================================
-% =======	ALL COMMANDS AND RULES FOR DOC 	 ============
+% =======   ALL COMMANDS AND RULES FOR DOC   ============
 % =======================================================
-\documentclass[12pt]{article}							    %Type of docuemtn and size of font
-\usepackage[margin=1.2in]{geometry}							%Margins
+\documentclass[12pt]{report}                                %Type of docuemtn and size of font
+\usepackage[margin=1.2in]{geometry}                         %Margins
 
-\usepackage[spanish]{babel}									%Please use spanish
-\usepackage[utf8]{inputenc}									%Please use spanish	
-\usepackage[T1]{fontenc}									%Please use spanish
+\usepackage[spanish]{babel}                                 %Please use spanish
+\usepackage[utf8]{inputenc}                                 %Please use spanish 
+\usepackage[T1]{fontenc}                                    %Please use spanish
 
-\usepackage{amsthm, amssymb, amsfonts}				        %Make math beautiful
+\usepackage{amsthm, amssymb, amsfonts}                      %Make math beautiful
 \usepackage[fleqn]{amsmath}                                 %Please make equations left
-\decimalpoint												%Make math beautiful
-\setlength{\parindent}{0pt}									%Eliminate ugly indentation
+\decimalpoint                                               %Make math beautiful
+\setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
 
-\usepackage{graphicx}										%Allow to create graphics
-\usepackage{wrapfig}                                    	%Allow to create images
+\usepackage{graphicx}                                       %Allow to create graphics
+\usepackage{wrapfig}                                        %Allow to create images
 \graphicspath{ {Graphics/} }                                %Where are the images :D
-\usepackage{listings}										%We will be using code here
-\usepackage[inline]{enumitem}								%We will need to enumarate
+\usepackage{listings}                                       %We will be using code here
+\usepackage[inline]{enumitem}                               %We will need to enumarate
 
-\usepackage{fancyhdr}										%Lets make awesome headers/footers
-\renewcommand{\footrulewidth}{0.5pt}						%We will need this!
-\setlength{\headheight}{16pt} 								%We will need this!
-\setlength{\parskip}{0.5em}									%We will need this!
-\pagestyle{fancy}											%Lets make awesome headers/footers
-\lhead{\footnotesize{\leftmark}}							%Headers!
-\rhead{\footnotesize{\rightmark}}							%Headers!
-\lfoot{Compilando Conocimiento}								%Footers!
-\rfoot{Oscar Rosas}						                    %Footers!
+\usepackage{fancyhdr}                                       %Lets make awesome headers/footers
+\renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
+\setlength{\headheight}{16pt}                               %We will need this!
+\setlength{\parskip}{0.5em}                                 %We will need this!
+\pagestyle{fancy}                                           %Lets make awesome headers/footers
+\lhead{\footnotesize{\leftmark}}                            %Headers!
+\rhead{\footnotesize{\rightmark}}                           %Headers!
+\lfoot{Compilando Conocimiento}                             %Footers!
+\rfoot{Oscar Rosas}                                         %Footers!
 
-\author{Oscar Andrés Rosas}						            %Who I am
+\author{Oscar Andrés Rosas}                                 %Who I am
 
 
 
 
 % =====================================================
-% ============     	  COVER PAGE	   ================
+% ============        COVER PAGE       ================
 % =====================================================
 \begin{document}
 \begin{titlepage}
 
-	\center
-	% ============ UNIVERSITY NAME AND DATA =========
-	\textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
-	\textsc{\Large Calculo}\\[1.0cm] 
+    \center
+    % ============ UNIVERSITY NAME AND DATA =========
+    \textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
+    \textsc{\Large Calculo}\\[1.0cm] 
 
-	% ============ NAME OF THE DOCUMENT  ============
-	\rule{\linewidth}{0.5mm} \\[1.0cm]
-		{ \huge \bfseries Calculo Integral}\\[1.0cm] 
-	\rule{\linewidth}{0.5mm} \\[2.0cm]
-	
-	% ====== SEMI TITLE ==========
-	{\LARGE Métodos de Integración e Integrales en General}\\[7cm] 
-	
-	% ============  MY INFORMATION  =================
-	\begin{center} \large
-	\textbf{\textsc{Autor:}}\\
-	Rosas Hernandez Oscar Andres
-	\end{center}
+    % ============ NAME OF THE DOCUMENT  ============
+    \rule{\linewidth}{0.5mm} \\[1.0cm]
+        { \huge \bfseries Cálculo Integral}\\[1.0cm] 
+    \rule{\linewidth}{0.5mm} \\[2.0cm]
+    
+    % ====== SEMI TITLE ==========
+    {\LARGE Métodos de Integración e Integrales en General}\\[7cm] 
+    
+    % ============  MY INFORMATION  =================
+    \begin{center} \large
+    \textbf{\textsc{Autor:}}\\
+    Rosas Hernandez Oscar Andres
+    \end{center}
 
-	\vfill
+    \vfill
 
 \end{titlepage}
 
-
-
-
-% ======================================================================================
-% ==================================     DOCUMENT  =====================================
-% ======================================================================================
-
-
 % =====================================================
-% ============    INTEGRACION IMPROPIA       ==========
+% ========                INDICE              =========
 % =====================================================
-\section{Integrales Impropias}
-
-% ==========================
-% ==== EXPLICACION =========
-% ==========================
-\subsection{¿Qué son?}
-
-Al definir la integral definida $\int_a^b f(x) dx$ estamos hablando de una función en la que:
-
-\begin{itemize}
-    \item Esta definida en ese intervalo.
-    \item No tiene una discontinuidad infinita
-    \item Obviamente el intervalo es finito
-\end{itemize}
-
-Pero, que pasaría si no fuera así...
-
-Las integrales impropias explorar esta posibilidad así que veasmola:
-
-% ======= TIPO 1 ========
-\subsubsection{TIPO 1) Intervalos Infinitos: Sumando de Verdad}
-
-Si la $\int_a^t f(x) dx$ existe para todo número $t \geq a$, entonces lo siguiente es verdad, siempre que exista el límite (como un número finito).
-\begin{equation}
-    \int_a^{\infty} f(x) dx = \lim_{t \to \infty} \int_a^t f(x) dx
-\end{equation}
-
-
-Si la $\int_t^b f(x) dx$ existe para todo número $b \leq t$, entonces lo siguiente es verdad, siempre que exista el límite (como un número finito).
-\begin{equation}
-    \int_{- \infty}^b f(x) dx = \lim_{t \to - \infty} \int_t^b f(x) dx
-\end{equation}
-
-
-Las integrales impropias $\int_a^{\infty}f(x)dx$ y esta $\int_{-\infty}^bf(x)dx$ se llaman \textbf{convegentes} si el límite existe y  \textbf{divergente} sino.
-
-Si $\int_a^{\infty}f(x)dx$ y $\int_{-\infty}^bf(x)dx$ son convergentes, entonces se define esta asombrosa integral como (donde a es cualquier número que tu quieras ;) ):
-\begin{equation}
-    \int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^{a} f(x) dx + \int_{a}^{\infty} f(x) dx   
-\end{equation}
-
-
-\subsection{Ejemplo}
-Podemos ver que con lo que sabemos ya podemos calcular la siguiente integral:
-
-\begin{equation*}
-    \int_1^{\infty} \frac{1}{x^2} dx = \lim_{t \to \infty} \int_1^t \frac{1}{x^2} dx  =
-    \lim_{t \to \infty}  \frac{-1}{t} \rvert_{1}^{t} = \lim_{t \to \infty}  1 - \frac{1}{t} = 1
-\end{equation*}
-
-
+\tableofcontents{}
 \clearpage
-% ======= TIPO 2 ========
-\subsubsection{TIPO 2) Funciones Discontinuas}
-
-Si $f(x)$ es continua en $[a, b)$  pero discontinua en b, entonces (si el límite existe y es finito):
-\begin{equation}
-    \int_a^b f(x) dx = \lim_{t \to b^-} \int_a^t f(x) dx
-\end{equation}
-
-Si $f(x)$ es continua en $(a, b]$  pero discontinua en a, entonces (si el límite existe y es finito):
-\begin{equation}
-    \int_a^b f(x) dx = \lim_{t \to a^+} \int_t^b f(x) dx
-\end{equation}
 
 
+% ======================================================================================
+% ================================    INTEGRALES      ==================================
+% ======================================================================================
 
-Si $\int_a^bf(x)dx$ es convergente, entonces se define esta asombrosa integral como (donde $c$ es $a<c<b$ ):
-\begin{equation}
-    \int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx  
-\end{equation}
+
+% ======================================================================================
+% ========================  INTEGRACION IMPROPIA    ====================================
+% ======================================================================================
+\chapter{Integrales Impropias}
+    \clearpage
+
+    % =====================================================
+    % ========         INTEGRACION IMPROPIA          ======
+    % =====================================================
+    \section{Integrales Impropias}
+
+        Al definir la integral definida $\int_a^b f(x) dx$ estamos hablando
+        de una función en la que:
+
+        \begin{itemize}
+            \item Esta definida en ese intervalo.
+            \item No tiene una discontinuidad infinita
+            \item Obviamente el intervalo es finito
+        \end{itemize}
+
+        Pero, que pasaría si no fuera así...
+
+        Las integrales impropias explorar esta posibilidad así que veasmola:
+
+    % ====================================================
+    % ========== INTERVALOS INFINITOS ====================
+    % ====================================================
+    \clearpage
+    \section{Tipo 1: Intervalos Infinitos}
+
+        \subsubsection{Límite Superior}
+        Si la $\int_a^t f(x) dx$ existe para todo número $t \geq a$, entonces
+        lo siguiente es verdad, siempre que exista el límite (como un número finito).
+        \begin{equation}
+            \int_a^{\infty} f(x) dx = \lim_{t \to \infty} \int_a^t f(x) dx
+        \end{equation}
+
+        \subsubsection{Límite Inferior}
+        Si la $\int_t^b f(x) dx$ existe para todo número $b \leq t$, entonces lo
+        siguiente es verdad, siempre que exista el límite (como un número finito).
+        \begin{equation}
+            \int_{- \infty}^b f(x) dx = \lim_{t \to - \infty} \int_t^b f(x) dx
+        \end{equation}
+
+        \subsubsection{Convergencia}
+        Las integrales impropias $\int_a^{\infty}f(x)dx$ y esta $\int_{-\infty}^bf(x)dx$
+        se llaman \textbf{convegentes} si el límite existe y  \textbf{divergente} sino.
+
+        \subsubsection{Ambos Límites}
+        Si $\int_a^{\infty}f(x)dx$ y $\int_{-\infty}^bf(x)dx$ son convergentes, entonces
+        se define esta asombrosa integral como:
+        \begin{equation}
+            \int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^{a} f(x) dx + \int_{a}^{\infty} f(x) dx   
+        \end{equation}
+
+        \subsubsection{Ejemplo}
+        Podemos ver que con lo que sabemos ya podemos calcular la siguiente integral:
+
+        \begin{equation*}
+        \begin{split}
+            \int_1^{\infty} \frac{1}{x^2} dx & = \lim_{t \to \infty} \int_1^t \frac{1}{x^2} dx \\
+            & = \lim_{t \to \infty} \frac{-1}{x} \big\rvert_{1}^{t} \\
+            & = \lim_{t \to \infty} \frac{-1}{t} - \frac{1}{-1} = \frac{-1}{t} + 1 = 1 + \frac{-1}{t} \\
+            & = \lim_{t \to \infty} 1 + \frac{-1}{t} = 1 + 0 = 1
+        \end{split}
+        \end{equation*}
+
+        \clearpage
+
+    % ====================================================
+    % ========== INTERVALOS INFINITOS ====================
+    % ====================================================
+    \clearpage
+    \section{Tipo 2: Funciones Discontinuas}
+
+        Si $f(x)$ es continua en $[a, b)$  pero discontinua en b, entonces
+        (si el límite existe y es finito):
+        \begin{equation}
+            \int_a^b f(x) dx = \lim_{t \to b^-} \int_a^t f(x) dx
+        \end{equation}
+
+        Si $f(x)$ es continua en $(a, b]$  pero discontinua en a, entonces
+        (si el límite existe y es finito):
+        \begin{equation}
+            \int_a^b f(x) dx = \lim_{t \to a^+} \int_t^b f(x) dx
+        \end{equation}
+
+
+
+        Si $\int_a^bf(x)dx$ es convergente, entonces se define esta asombrosa integral
+        como (donde $c$ es $a<c<b$ ):
+        \begin{equation}
+            \int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx  
+        \end{equation}
 
 
 
@@ -158,15 +182,15 @@ Si $\int_a^bf(x)dx$ es convergente, entonces se define esta asombrosa integral c
 % =====================================================
 \clearpage
 \bibliographystyle{plain}
-	\begin{thebibliography}{9}
+    \begin{thebibliography}{9}
 
-	% ============ REFERENCE #1 ========
-	\bibitem{Sitio1} 
-		ProbRob
-		\\\texttt{Youtube.com}
+    % ============ REFERENCE #1 ========
+    \bibitem{Sitio1} 
+        ProbRob
+        \\\texttt{Youtube.com}
 
 
-	 
+     
 
 \end{thebibliography}
 
