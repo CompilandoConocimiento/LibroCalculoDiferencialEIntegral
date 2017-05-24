@@ -112,17 +112,17 @@
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
-        \subsection{Ejemplo}
-        Un ejercicio muy sencillo es ver a que converge la siguiente sucesión:
-        \begin{equation*}
-            5 - \frac{10}{3} + \frac{20}{9} - \frac{40}{27} + \cdots
-        \end{equation*}
+        \subsubsection{Ejemplo 1}
+            Un ejercicio muy sencillo es ver a que converge la siguiente sucesión:
+            \begin{equation*}
+                5 - \frac{10}{3} + \frac{20}{9} - \frac{40}{27} + \cdots
+            \end{equation*}
 
-        Podemos encontrar la respuesta facilmente porque vemos que
-        $r=-\frac{2}{3}$ y como $|r|<1$ la Suma es:
-        \begin{equation*}
-            \frac{5}{1-\frac{2}{3}} = \frac{5}{\frac{5}{3}} = 3
-        \end{equation*}
+            Podemos encontrar la respuesta facilmente porque vemos que
+            $r=-\frac{2}{3}$ y como $|r|<1$ la Suma es:
+            \begin{equation*}
+                \frac{5}{1-\frac{2}{3}} = \frac{5}{\frac{5}{3}} = 3
+            \end{equation*}
 
 
 
@@ -216,6 +216,7 @@
         \end{itemize}
 
     \clearpage
+    % ========   ESTIMACION DE ALTERNAS   =======
     \subsection{Estimación para Series Alternas}
         Una suma parcial de de cualquier serie convergente se puede usar como una
         aproximación a una suma total, pero no es muy utilizado, a menos que estime
@@ -234,6 +235,7 @@
             |R_n| = |S - S_n| \leq b_{n+1}
         \end{equation}
 
+    % ========   CONVERGENCIA ABSOLUTA    =======
     \subsection{Convergencia Absoluta}
 
         Sea $\{a_n\}$ una sucesión:
@@ -336,28 +338,28 @@
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
-        \subsection{Ejemplo 1}
-        Busquemos si la siguiente Serie diverge o converge:
+            \subsubsection{Ejemplo 1}
+            Busquemos si la siguiente Serie diverge o converge:
 
-        \begin{equation*}
-            \sum_{n=1}^{\infty} \frac{5}{2n^2 +4n +3}
-        \end{equation*}
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \frac{5}{2n^2 +4n +3}
+            \end{equation*}
 
-        Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta
-        que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+            Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta
+            que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
 
-        \begin{equation*}
-            \sum b_n = \sum_{n=1}^{\infty} \frac{5}{2n^2} = \frac{5}{2}\sum_{n=1}^{\infty} \frac{1}{n^2}
-        \end{equation*}
+            \begin{equation*}
+                \sum b_n = \sum_{n=1}^{\infty} \frac{5}{2n^2} = \frac{5}{2}\sum_{n=1}^{\infty} \frac{1}{n^2}
+            \end{equation*}
 
-        Bueno, podemos decir que:
-        \begin{equation*}
-            \frac{5}{2n^2 +4n +3} < \frac{5}{2n^2}
-        \end{equation*}
-        Simplemente por el denominador.
+            Bueno, podemos decir que:
+            \begin{equation*}
+                \frac{5}{2n^2 +4n +3} < \frac{5}{2n^2}
+            \end{equation*}
+            Simplemente por el denominador.
 
-        Y veamos que todo se cumplio, ademas sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente,
-        entonces es seguro que la serie original que teniamos tambien lo sea. :D
+            Y veamos que todo se cumplio, ademas sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente,
+            entonces es seguro que la serie original que teniamos tambien lo sea. :D
 
 
 
@@ -383,117 +385,116 @@
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
-        \subsection{Ejemplo 1}
-        Busquemos si la siguiente Serie diverge o converge:
+        \subsubsection{Ejemplo 1}
+            Busquemos si la siguiente Serie diverge o converge:
 
-        \begin{equation*}
-            \sum_{n=1}^{\infty} \frac{3n^2+2}{(n^2-5)^2}
-        \end{equation*}
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \frac{3n^2+2}{(n^2-5)^2}
+            \end{equation*}
 
-        Antes que hacer nada, lo mejor es expandir:
-        \begin{equation*}
-            \sum_{n=1}^{\infty} \frac{3n^2+2}{n^4-10n^2+25}
-        \end{equation*}
-         
-        Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge
-        (para ahorrar trabajo):
-        \begin{equation*}
-            \lim_{n \to \infty} \frac{3n^2+2}{n^4-10n^2+25} = ?
-        \end{equation*}
+            Antes que hacer nada, lo mejor es expandir:
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \frac{3n^2+2}{n^4-10n^2+25}
+            \end{equation*}
+             
+            Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge
+            (para ahorrar trabajo):
+            \begin{equation*}
+                \lim_{n \to \infty} \frac{3n^2+2}{n^4-10n^2+25} = ?
+            \end{equation*}
 
-        Esto lo podemos calcular de muchas maneras, por ejemplo:
-        \begin{equation*}
-            \lim_{n \to \infty} \frac{ \frac{3n^2}{n^4} +\frac{2}{n^4}  }{ 1 - \frac{10n^2}{n^4} + \frac{25}{n^4} } = \frac{0}{1+0} = 0
-        \end{equation*}
+            Esto lo podemos calcular de muchas maneras, por ejemplo:
+            \begin{equation*}
+                \lim_{n \to \infty} \frac{ \frac{3n^2}{n^4} +\frac{2}{n^4}  }{ 1 - \frac{10n^2}{n^4} + \frac{25}{n^4} } = \frac{0}{1+0} = 0
+            \end{equation*}
 
-        Ok, paso esa prueba, lamentablemente esto no es
-        suficiente para probar que converge.
-        Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+            Ok, paso esa prueba, lamentablemente esto no es
+            suficiente para probar que converge.
+            Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
 
-        \begin{equation*}
-            \sum b_n = \sum_{n=1}^{\infty} \frac{n^2}{n^4} = \sum_{n=1}^{\infty} \frac{1}{n^2}
-        \end{equation*}
+            \begin{equation*}
+                \sum b_n = \sum_{n=1}^{\infty} \frac{n^2}{n^4} = \sum_{n=1}^{\infty} \frac{1}{n^2}
+            \end{equation*}
 
-        Ahora aplicando lo que acabamos de ver:
-        \begin{equation*}
-            \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3n^2+2}{n^4-10n^2+25} }{ \frac{1}{n^2} } \right) =  \left( \frac{3n^4+2n^2}{n^4-10n^2+25} \right) = 3
-        \end{equation*}
+            Ahora aplicando lo que acabamos de ver:
+            \begin{equation*}
+                \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3n^2+2}{n^4-10n^2+25} }{ \frac{1}{n^2} } \right) =  \left( \frac{3n^4+2n^2}{n^4-10n^2+25} \right) = 3
+            \end{equation*}
 
-        Y veamos que todo se cumplio, 3 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea. :D
-
-
-        % ==========================
-        % ====    EJEMPLO  =========
-        % ==========================
-        \subsection{Ejemplo 2}
-        Busquemos si la siguiente Serie diverge o converge:
-
-        \begin{equation*}
-            \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k+7}
-        \end{equation*}
-         
-        Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo):
-        \begin{equation*}
-            \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = ?
-        \end{equation*}
-
-        Esto lo podemos calcular de muchas maneras, por ejemplo:
-        \begin{equation*}
-            \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = \frac{ \frac{n^{k-1}}{n^k} }{1+\frac{7}{n^k}} = \frac{0}{1+0} = 0
-        \end{equation*}
-
-        Ok, paso esa prueba, lamentablemente esto no es suficiente para probar que converge, es más parece que debería diverger, así que probemos para eso:
-
-        Ahora apliquemos el criterio de comparación, podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
-
-        \begin{equation*}
-            \sum b_n = \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k} = \sum_{n=1}^{\infty} \frac{1}{n}
-        \end{equation*}
-
-        Sabemos que esta serie diverge.
-
-        Ahora aplicando lo que acabamos de ver:
-        \begin{equation*}
-            \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{n^{k-1}}{n^k+7} }{ \frac{1}{n} } \right) =  \left( \frac{n^k}{n^k+7} \right) = 1
-        \end{equation*}
-
-        Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n}$ es divergente, entonces es seguro que la serie original que teniamos tambien lo es :D
+            Y veamos que todo se cumplio, 3 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n^2}$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea. :D
 
 
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
-        \subsection{Ejemplo 3}
-        Busquemos si la siguiente Serie diverge o converge:
+        \subsubsection{Ejemplo 2}
+            Busquemos si la siguiente Serie diverge o converge:
 
-        \begin{equation*}
-            \sum_{n=1}^{\infty} \frac{3^n+2}{4^n-1}
-        \end{equation*}
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k+7}
+            \end{equation*}
+             
+            Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo):
+            \begin{equation*}
+                \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = ?
+            \end{equation*}
 
-        Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo). Esto se calcula muy facilmente porque el demoni- nador crece mucho mas rapidamente
+            Esto lo podemos calcular de muchas maneras, por ejemplo:
+            \begin{equation*}
+                \lim_{n \to \infty} \frac{n^{k-1}}{n^k+7} = \frac{ \frac{n^{k-1}}{n^k} }{1+\frac{7}{n^k}} = \frac{0}{1+0} = 0
+            \end{equation*}
 
-        \begin{equation*}
-            \lim_{n \to \infty}  \frac{3^n+2}{4^n-1} = 0
-        \end{equation*}
+            Ok, paso esa prueba, lamentablemente esto no es suficiente para probar que converge, es más parece que debería diverger, así que probemos para eso:
+
+            Ahora apliquemos el criterio de comparación, podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+
+            \begin{equation*}
+                \sum b_n = \sum_{n=1}^{\infty} \frac{n^{k-1}}{n^k} = \sum_{n=1}^{\infty} \frac{1}{n}
+            \end{equation*}
+
+            Sabemos que esta serie diverge.
+
+            Ahora aplicando lo que acabamos de ver:
+            \begin{equation*}
+                \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{n^{k-1}}{n^k+7} }{ \frac{1}{n} } \right) =  \left( \frac{n^k}{n^k+7} \right) = 1
+            \end{equation*}
+
+            Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma \frac{1}{n}$ es divergente, entonces es seguro que la serie original que teniamos tambien lo es :D
 
 
-        Ok, paso esa prueba, lamentablemente esto no es
-        suficiente para probar que converge.
-        Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+        % ==========================
+        % ====    EJEMPLO  =========
+        % ==========================
+        \subsubsection{Ejemplo 3}
+            Busquemos si la siguiente Serie diverge o converge:
 
-        \begin{equation*}
-            \sum b_n = \sum_{n=1}^{\infty} \frac{3^n}{4^n} = \sum_{n=1}^{\infty} \left( \frac{3}{4} \right)^n 
-        \end{equation*}
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \frac{3^n+2}{4^n-1}
+            \end{equation*}
 
-        Esto es una serie geometrica que converge, pues $|r| < 1$
+            Antes que seguir a nada, vemos si con la prueba de la divergencia podemos mostrar que diverge (para ahorrar trabajo). Esto se calcula muy facilmente porque el demoni- nador crece mucho mas rapidamente
 
-        Ahora aplicando lo que acabamos de ver:
-        \begin{equation*}
-            \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3^n+2}{4^n-1} }{ \left( \frac{3}{4} \right)^n  } \right) =  \left( \frac{12^n + 2 \cdot 4^n}{12^n -3^n} \right) = \left( \frac{1 + 2 (\frac{1}{3})^n}{1 +  (\frac{1}{4})^n} \right) = 1
-        \end{equation*}
+            \begin{equation*}
+                \lim_{n \to \infty}  \frac{3^n+2}{4^n-1} = 0
+            \end{equation*}
 
-        Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma (\frac{3}{4})^n$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea :D
 
+            Ok, paso esa prueba, lamentablemente esto no es
+            suficiente para probar que converge.
+            Ahora apliquemos el criterio de comparación: Podemos ver que esta serie se pacere mucho a esta que ya conocemos todos, a esta serie de ayuda la llamaremos $\Sigma b_n$:
+
+            \begin{equation*}
+                \sum b_n = \sum_{n=1}^{\infty} \frac{3^n}{4^n} = \sum_{n=1}^{\infty} \left( \frac{3}{4} \right)^n 
+            \end{equation*}
+
+            Esto es una serie geometrica que converge, pues $|r| < 1$
+
+            Ahora aplicando lo que acabamos de ver:
+            \begin{equation*}
+                \lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \left( \frac{ \frac{3^n+2}{4^n-1} }{ \left( \frac{3}{4} \right)^n  } \right) =  \left( \frac{12^n + 2 \cdot 4^n}{12^n -3^n} \right) = \left( \frac{1 + 2 (\frac{1}{3})^n}{1 +  (\frac{1}{4})^n} \right) = 1
+            \end{equation*}
+
+            Y veamos que todo se cumplio, 1 es finito y positivo y sabemos que la serie $\Sigma (\frac{3}{4})^n$ es convergente, entonces es seguro que la serie original que teniamos tambien lo sea :D
 
 
     % =====================================================
@@ -527,18 +528,61 @@
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
-        \subsection{Ejemplo 1}
-        Busquemos si la siguiente Serie diverge o converge:
+        \subsubsection{Ejemplo 1}
+            Busquemos si la siguiente Serie diverge o converge:
 
-        \begin{equation*}
-            \sum_{n=1}^{\infty} \frac{2^n}{n^2}
-        \end{equation*}
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \frac{2^n}{n^2}
+            \end{equation*}
 
-        Probemos entonces la razón:
-        \begin{equation*}
-            \frac{ \frac{2^n}{n^2} }{ \frac{2 \cdot 2^n}{(n+1)^2 } } = \frac{ \frac{2^n}{n^2} }{ 2 \frac{2^n}{n^2 + 2n + 1} }
-        \end{equation*}
+            Probemos entonces la razón:
+            \begin{equation*}
+                \frac{ \frac{2^n}{n^2} }{ \frac{2 \cdot 2^n}{(n+1)^2 } } = \frac{ \frac{2^n}{n^2} }{ 2 \frac{2^n}{n^2 + 2n + 1} }
+            \end{equation*}
 
+
+    % =====================================================
+    % ========       CRITERIO DE LA RAIZ            =======
+    % =====================================================
+    \clearpage
+    \section{Criterio de la Raíz}
+
+        Considera a este como el hermano perdido de la comprobación por razón.
+        Es conveniente aplicar la siguiente prueba cuando hay potencias n-ésimas.
+        Su demostración es similar a la de la prueba de la razón. 
+
+        Si:
+
+        \begin{equation}
+            \lim_{n \to \infty} \sqrt[n]{|a_n|} = L
+        \end{equation}
+
+        Entonces:
+        \begin{itemize}
+            \item $L < 1$ : La Se es absolutamente convergente.
+            \item $L > 1$ ó $L = \infty$ : La Serie diverge.
+            \item $L = 1$ : No nos dirá nada, digamos.
+        \end{itemize}
+
+        ¿Ves?, te dije que se parecia mucho a la de razón.
+
+        % ==========================
+        % ====    EJEMPLO  =========
+        % ==========================
+        \subsubsection{Ejemplo 1}
+            Busquemos si la siguiente Serie diverge o converge:
+
+            \begin{equation*}
+                \sum_{n=1}^{\infty} \left( \frac{2n+3}{3n+2} \right)^n
+            \end{equation*}
+
+            Probemos entonces la Raíz:
+            \begin{equation*}
+                 \lim_{n \to \infty} \sqrt[n]{ \left( \frac{2n+3}{3n+2} \right)^n } =
+                 \lim_{n \to \infty} \frac{2n+3}{3n+2} = \frac{2}{3}
+            \end{equation*}
+
+            Y como $\frac{2}{3}$ es menor que 1 sabemos que nuestra serie converge.
 
 
     % =====================================================
@@ -559,21 +603,38 @@
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
-        \subsection{Ejemplo 1}
-        Una sencilla para encaminarnos:
-        \begin{equation*}
-            \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n}
-        \end{equation*}
+        \subsubsection{Ejemplo 1}
+            Una sencilla para encaminarnos:
+            \begin{equation*}
+                \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n}
+            \end{equation*}
 
 
-         \begin{itemize}
-            \item Paso 1: Limite $\lim_{n \to \infty} \frac{1}{n}=0$
-            \item Paso 2: ¿Es Decreciente? Es decir :$\frac{1}{n}-\frac{1}{n+1} \geq 0 $
-         \end{itemize}
+             \begin{itemize}
+                \item Paso 1: Limite $\lim_{n \to \infty} \frac{1}{n}=0$
+                \item Paso 2: ¿Es Decreciente? Es decir :$\frac{1}{n}-\frac{1}{n+1} \geq 0 $
+             \end{itemize}
 
-        Como es verdadero entonces esta suma es convergente.
+            Como es verdadero entonces esta suma es convergente.
 
 
+
+    % =====================================================
+    % ========    ESTRATEGIAS PARA USAR CRITERIOS   =======
+    % =====================================================
+    \clearpage
+    \section{Estrategias para Usar Criterios}
+
+    \begin{itemize}
+        \item (Prueba de Divergencia) Verifica que el n-ésimo sea 0 cuando n tienda a infinito.
+        \item Verifica si tiene es una Serie P ó Geométrica, si si ya sabes que hacer ;)
+        \item (Comparación) Si se pacere a una Serie P o Geométrica, usa alguna de las de Comparación.
+        \item (Convergencia Absoluta) Si quitando que sea alternante se vuelve algo como una P o Geométrica, intenta convergencia absoluta.
+        \item (Criterio de Alternantes) Vea que si es alternante.
+        \item (Razón) Si tienes Factoriales o Potencias, prueba con Razón.
+        \item (Raíz) Si nada funciona, o tienes un termino elevado a la n, intenta la Raíz.
+        \item (Integrales) Si estás re muerto, intenta con Integrales.
+    \end{itemize}
 
 
 
