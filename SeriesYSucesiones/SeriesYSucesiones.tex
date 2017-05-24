@@ -256,6 +256,102 @@
 
 
 
+    % =====================================================
+    % ========          SERIES DE POTENCIAS         =======
+    % =====================================================
+    \clearpage
+    \section{Series de Potencias}
+
+        Una serie de potencias es una serie donde $x$ es una variable
+        y las $c_n$ son constantes que se denominan coeficientes de la serie.
+        Para cada x establecida, la serie ya es una serie de constantes
+        que puede probar para ver si son convergentes o divergentes.
+
+        Repito, estas series son respecto a "dos variables":
+        \begin{itemize}
+            \item $x$ es variable totalmente libre, como una chica francesa.
+            \item $c_n$ es un acrónimo para coloca aqui cualquier serie común, como el 
+            $b_n$ de las alternas.
+        \end{itemize}
+
+        \begin{equation}
+            \sum_{n=0}^{\infty} c_n x^n = c_0 + c_1x + c_2x^2 + c_3x^3 + \cdots
+        \end{equation}
+
+        Pero generalmente no es así como lo vemos, sino que tienen esta formula, 
+        donde se le conoce como serie de pontencia centrada en a, en $(x-a)$ ó
+        con respecto a a:
+
+        \begin{equation}
+            \sum_{n=0}^{\infty} c_n (x-a)^n = c_0 + c_1(x-a) + c_2(x-a)^2 + c_3(x-a)^3 + \cdots
+        \end{equation}
+
+
+        Aclaraciones de la Notación  
+        \begin{itemize}
+            \item Siempre que $x = a$ la serie va a converger
+            \item Observe que al escribir el término correnpondiente a n=0 
+                  en las ecuaciones 1 y 2, se ha adoptado la convención de
+                  $(x-a)^0=1$ aun cuando $x=a$. 
+        \end{itemize}
+
+
+    % ========   RADIO DE CONVERGENCIA    =======
+    \subsection{Radio de Convergencia}
+        Como puedes ver la $x$ en las series de potencias es una incognita que puede
+        valer cualquier número, así decimos que el Radio de Convergencia es el conjunto de
+        todos los valores de x tales que se cumple que dicha serie converge.
+
+        Ahora veamos como sacar dicho intervalo - conjunto:
+
+        \begin{itemize}
+            \item Usa el Criterio de la Razón o de la Raíz como creas mas apropiado
+            y despeja a $x$ de tu resultado, obtendras una desigualdad o algo parecido
+
+            \item Ya casi terminas, lo único que te falta es ver que pasa cuando el 
+            criterio que elegiste de 1 (pues recuerda que ambos criterios no te dicen nada
+            si $L=1$), así que a patita verifica que pasa en ambos límites del intervalo para
+            saber que pasa en ambos extremos (si son cerrados o abiertos). 
+        \end{itemize}
+
+
+        % ==========================
+        % ====    EJEMPLO  =========
+        % ==========================
+        \subsubsection{Ejemplo 1}
+            Un ejercicio muy sencillo es ver para que valores de $x$
+            la siguiente serie es convergente:
+            \begin{equation*}
+               \sum_{n=1}^\infty \frac{(x-3)^n}{n}
+            \end{equation*}
+
+            Podemos encontrar la respuesta facilmente por el Criterio de la Razón como:
+            \begin{equation*}
+                \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = 
+                \lim_{n \to \infty} \left| \frac{\frac{(x-3)^{n+1}}{n+1}}{\frac{(x-3)^n}{n}} \right| = 
+                \lim_{n \to \infty} \left| \frac{(x-3)^{n+1}}{n+1} \cdot \frac{n}{(x-3)^{n}} \right| =
+                \lim_{n \to \infty} \frac{1}{1+\frac{1}{n}} |x-3| =
+                |x-3|
+            \end{equation*}
+
+            Ahora como queremos cuando converge de verdad nos importa esto:
+            \begin{equation*}
+                |x-3| < 1 \to 2 < x < 4
+            \end{equation*}
+
+            Ahora ya solo checamos para 2 y para 4:
+
+            Si podes el 4 en la serie se vuelve la serie $\Sigma \frac{1}{n}$ así es es obvio que diverge.
+
+            Si pones 2, logramos llegar a la clasica $\Sigma \frac{(-1)^n}{n}$ que es una clasica
+            alternante que converge.
+
+            Por lo tanto ya para finalizar tenemos que nuestro radio de convergencia será:
+            $2 \leq x < 4$
+
+
+
+
 
 
 
@@ -627,7 +723,7 @@
 
     \begin{itemize}
         \item (Prueba de Divergencia) Verifica que el n-ésimo sea 0 cuando n tienda a infinito.
-        \item Verifica si tiene es una Serie P ó Geométrica, si si ya sabes que hacer ;)
+        \item Verifica si la que tienes es una Serie P ó Geométrica, si si ya sabes que hacer ;)
         \item (Comparación) Si se pacere a una Serie P o Geométrica, usa alguna de las de Comparación.
         \item (Convergencia Absoluta) Si quitando que sea alternante se vuelve algo como una P o Geométrica, intenta convergencia absoluta.
         \item (Criterio de Alternantes) Vea que si es alternante.

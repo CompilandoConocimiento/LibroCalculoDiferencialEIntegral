@@ -7,19 +7,22 @@
 \contentsline {section}{\numberline {1.4}Series Alternantes}{6}
 \contentsline {subsection}{\numberline {1.4.1}Estimaci\IeC {\'o}n para Series Alternas}{7}
 \contentsline {subsection}{\numberline {1.4.2}Convergencia Absoluta}{7}
-\contentsline {chapter}{\numberline {2}Criterios en Series}{8}
-\contentsline {section}{\numberline {2.1}Prueba de la Divergencia}{9}
-\contentsline {section}{\numberline {2.2}Prueba de la Integral}{10}
-\contentsline {section}{\numberline {2.3}Criterio de Comparaci\IeC {\'o}n: Directa}{11}
-\contentsline {subsubsection}{Ejemplo 1}{11}
-\contentsline {section}{\numberline {2.4}Criterio de Comparaci\IeC {\'o}n: Limites}{12}
-\contentsline {subsubsection}{Ejemplo 1}{12}
-\contentsline {subsubsection}{Ejemplo 2}{13}
-\contentsline {subsubsection}{Ejemplo 3}{14}
-\contentsline {section}{\numberline {2.5}Criterio de la R\IeC {\'a}zon}{15}
-\contentsline {subsubsection}{Ejemplo 1}{15}
-\contentsline {section}{\numberline {2.6}Criterio de la Ra\IeC {\'\i }z}{16}
-\contentsline {subsubsection}{Ejemplo 1}{16}
-\contentsline {section}{\numberline {2.7}Criterio de las Series Alternantes}{17}
+\contentsline {section}{\numberline {1.5}Series de Potencias}{8}
+\contentsline {subsection}{\numberline {1.5.1}Radio de Convergencia}{8}
+\contentsline {subsubsection}{Ejemplo 1}{9}
+\contentsline {chapter}{\numberline {2}Criterios en Series}{10}
+\contentsline {section}{\numberline {2.1}Prueba de la Divergencia}{11}
+\contentsline {section}{\numberline {2.2}Prueba de la Integral}{12}
+\contentsline {section}{\numberline {2.3}Criterio de Comparaci\IeC {\'o}n: Directa}{13}
+\contentsline {subsubsection}{Ejemplo 1}{13}
+\contentsline {section}{\numberline {2.4}Criterio de Comparaci\IeC {\'o}n: Limites}{14}
+\contentsline {subsubsection}{Ejemplo 1}{14}
+\contentsline {subsubsection}{Ejemplo 2}{15}
+\contentsline {subsubsection}{Ejemplo 3}{16}
+\contentsline {section}{\numberline {2.5}Criterio de la R\IeC {\'a}zon}{17}
 \contentsline {subsubsection}{Ejemplo 1}{17}
-\contentsline {section}{\numberline {2.8}Estrategias para Usar Criterios}{18}
+\contentsline {section}{\numberline {2.6}Criterio de la Ra\IeC {\'\i }z}{18}
+\contentsline {subsubsection}{Ejemplo 1}{18}
+\contentsline {section}{\numberline {2.7}Criterio de las Series Alternantes}{19}
+\contentsline {subsubsection}{Ejemplo 1}{19}
+\contentsline {section}{\numberline {2.8}Estrategias para Usar Criterios}{20}
