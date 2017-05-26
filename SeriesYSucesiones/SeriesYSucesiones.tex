@@ -9,6 +9,7 @@
 % =======================================================
 \documentclass[12pt]{report}                                %Type of docuemtn and size of font
 \usepackage[margin=1.2in]{geometry}                         %Margins
+\usepackage{hyperref}                                       %Create MetaData for a PDF
 
 \usepackage[spanish]{babel}                                 %Please use spanish
 \usepackage[utf8]{inputenc}                                 %Please use spanish 
@@ -297,6 +298,7 @@
 
 
     % ========   RADIO DE CONVERGENCIA    =======
+    \clearpage
     \subsection{Radio de Convergencia}
         Como puedes ver la $x$ en las series de potencias es una incognita que puede
         valer cualquier número, así decimos que el Radio de Convergencia es el conjunto de
@@ -325,6 +327,7 @@
         % ==========================
         % ====    EJEMPLO  =========
         % ==========================
+        \clearpage
         \subsubsection{Ejemplo 1}
             Un ejercicio muy sencillo es ver para que valores de $x$
             la siguiente serie es convergente:
@@ -604,7 +607,7 @@
     % ========       CRITERIO DE LA RAZON           =======
     % =====================================================
     \clearpage
-    \section{Criterio de la Rázon}
+    \section{Criterio de la Razón}
 
         Sea una $\Sigma a_n$ una series de términos positivos, tal que:
 
@@ -626,22 +629,6 @@
         \left| \frac{\frac{d}{dn} (a_{n+1})}{\frac{d}{dn} (a_n)} \right| = L
         \end{equation}
 
-
-
-        % ==========================
-        % ====    EJEMPLO  =========
-        % ==========================
-        \subsubsection{Ejemplo 1}
-            Busquemos si la siguiente Serie diverge o converge:
-
-            \begin{equation*}
-                \sum_{n=1}^{\infty} \frac{2^n}{n^2}
-            \end{equation*}
-
-            Probemos entonces la razón:
-            \begin{equation*}
-                \frac{ \frac{2^n}{n^2} }{ \frac{2 \cdot 2^n}{(n+1)^2 } } = \frac{ \frac{2^n}{n^2} }{ 2 \frac{2^n}{n^2 + 2n + 1} }
-            \end{equation*}
 
 
     % =====================================================
