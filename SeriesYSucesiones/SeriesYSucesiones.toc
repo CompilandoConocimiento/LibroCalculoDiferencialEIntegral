@@ -20,9 +20,8 @@
 \contentsline {subsubsection}{Ejemplo 2}{16}{section*.6}
 \contentsline {subsubsection}{Ejemplo 3}{17}{section*.7}
 \contentsline {section}{\numberline {2.5}Criterio de la Raz\IeC {\'o}n}{18}{section.2.5}
-\contentsline {subsubsection}{Ejemplo 1}{18}{section*.8}
 \contentsline {section}{\numberline {2.6}Criterio de la Ra\IeC {\'\i }z}{19}{section.2.6}
-\contentsline {subsubsection}{Ejemplo 1}{19}{section*.9}
+\contentsline {subsubsection}{Ejemplo 1}{19}{section*.8}
 \contentsline {section}{\numberline {2.7}Criterio de las Series Alternantes}{20}{section.2.7}
-\contentsline {subsubsection}{Ejemplo 1}{20}{section*.10}
+\contentsline {subsubsection}{Ejemplo 1}{20}{section*.9}
 \contentsline {section}{\numberline {2.8}Estrategias para Usar Criterios}{21}{section.2.8}
