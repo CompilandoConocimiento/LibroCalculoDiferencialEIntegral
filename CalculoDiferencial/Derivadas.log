@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 JUN 2017 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 JUN 2017 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -508,6 +508,14 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsrefs/textcmds.sty
+Package: textcmds 2012/08/02 v2.00
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count103
+\cp@tempcnt=\count104
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
@@ -555,13 +563,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count103
+\inf@bad=\count105
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count104
-\leftroot@=\count105
+\uproot@=\count106
+\leftroot@=\count107
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count106
-\DOTSCASE@=\count107
+\classnum@=\count108
+\DOTSCASE@=\count109
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -570,15 +578,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen118
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count108
-\c@MaxMatrixCols=\count109
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
 \dotsspace@=\muskip11
-\c@parentequation=\count110
-\dspbrk@lvl=\count111
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
 \tag@help=\toks27
-\row@=\count112
-\column@=\count113
-\maxfields@=\count114
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
 \andhelp@=\toks28
 \eqnshift@=\dimen119
 \alignsep@=\dimen120
@@ -592,6 +600,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \mathdisplay@stack=\toks30
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
@@ -609,7 +620,7 @@ Package graphics Info: Driver file: pdftex.def on input line 96.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count115
+\Gread@gobject=\count117
 ))
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
@@ -617,29 +628,29 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 (/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen127
 \WF@size=\dimen128
-\c@WF@wrappedlines=\count116
+\c@WF@wrappedlines=\count118
 \WF@box=\box28
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count117
+\lst@mode=\count119
 \lst@gtempboxa=\box29
 \lst@token=\toks32
-\lst@length=\count118
+\lst@length=\count120
 \lst@currlwidth=\dimen129
-\lst@column=\count119
-\lst@pos=\count120
+\lst@column=\count121
+\lst@pos=\count122
 \lst@lostspace=\dimen130
 \lst@width=\dimen131
-\lst@newlines=\count121
-\lst@lineno=\count122
+\lst@newlines=\count123
+\lst@lineno=\count124
 \lst@maxwidth=\dimen132
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count123
-\lst@skipnumbers=\count124
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
 \lst@framebox=\box30
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
@@ -653,7 +664,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen133
 \enit@toks=\toks33
 \enit@inbox=\box31
-\enitdp@description=\count125
+\enitdp@description=\count127
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tasks/tasks.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -669,24 +680,24 @@ L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
 L3 Module: l3str 2016/03/24 v6441 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2016/03/24 v6441 L3 Integers
-\c_max_int=\count126
-\l_tmpa_int=\count127
-\l_tmpb_int=\count128
-\g_tmpa_int=\count129
-\g_tmpb_int=\count130
+\c_max_int=\count128
+\l_tmpa_int=\count129
+\l_tmpb_int=\count130
+\g_tmpa_int=\count131
+\g_tmpb_int=\count132
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count131
+\g__prg_map_int=\count133
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
 L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
 L3 Module: l3msg 2016/03/26 v6464 L3 Messages
 L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
-\l_iow_line_count_int=\count132
-\l__iow_target_count_int=\count133
-\l__iow_current_line_int=\count134
-\l__iow_current_word_int=\count135
-\l__iow_current_indentation_int=\count136
+\l_iow_line_count_int=\count134
+\l__iow_target_count_int=\count135
+\l__iow_current_line_int=\count136
+\l__iow_current_word_int=\count137
+\l__iow_current_indentation_int=\count138
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \c_zero_dim=\dimen134
 \c_max_dim=\dimen135
@@ -707,18 +718,18 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count137
-\l_keys_choice_int=\count138
+\g__keyval_level_int=\count139
+\l_keys_choice_int=\count140
 L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
-\c__fp_leading_shift_int=\count139
-\c__fp_middle_shift_int=\count140
-\c__fp_trailing_shift_int=\count141
-\c__fp_big_leading_shift_int=\count142
-\c__fp_big_middle_shift_int=\count143
-\c__fp_big_trailing_shift_int=\count144
-\c__fp_Bigg_leading_shift_int=\count145
-\c__fp_Bigg_middle_shift_int=\count146
-\c__fp_Bigg_trailing_shift_int=\count147
+\c__fp_leading_shift_int=\count141
+\c__fp_middle_shift_int=\count142
+\c__fp_trailing_shift_int=\count143
+\c__fp_big_leading_shift_int=\count144
+\c__fp_big_middle_shift_int=\count145
+\c__fp_big_trailing_shift_int=\count146
+\c__fp_Bigg_leading_shift_int=\count147
+\c__fp_Bigg_middle_shift_int=\count148
+\c__fp_Bigg_trailing_shift_int=\count149
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box32
 \l_tmpa_box=\box33
@@ -768,41 +779,41 @@ L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count148
+\l__driver_color_stack_int=\count150
 \l__driver_tmp_box=\box47
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count149
-\l__xparse_m_args_int=\count150
-\l__xparse_mandatory_args_int=\count151
-\l__xparse_processor_int=\count152
-\l__xparse_v_nesting_int=\count153
+\l__xparse_current_arg_int=\count151
+\l__xparse_m_args_int=\count152
+\l__xparse_mandatory_args_int=\count153
+\l__xparse_processor_int=\count154
+\l__xparse_v_nesting_int=\count155
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/eepic/epic.sty
 Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
-\@@multicnt=\count154
-\d@lta=\count155
+\@@multicnt=\count156
+\d@lta=\count157
 \@delta=\dimen165
 \@@delta=\dimen166
-\@gridcnt=\count156
-\@joinkind=\count157
+\@gridcnt=\count158
+\@joinkind=\count159
 \@dotgap=\dimen167
 \@ddotgap=\dimen168
-\@x@diff=\count158
-\@y@diff=\count159
+\@x@diff=\count160
+\@y@diff=\count161
 \x@diff=\dimen169
 \y@diff=\dimen170
 \@dotbox=\box48
-\num@segments=\count160
-\num@segmentsi=\count161
+\num@segments=\count162
+\num@segmentsi=\count163
 \@datafile=\read1
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/cntformats/cntformats.sty
 Package: cntformats 2014/07/20 v0.7 A different way to read counters. (CN)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count162
+\etb@tempcnta=\count164
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/cnltx/cnltx-base.sty
 Package: cnltx-base 2015/08/17 v0.13 LaTeX tools and documenting facilities (CN
@@ -823,9 +834,9 @@ ode.tex
 \pgfopts@list@add@a@toks=\toks37
 \pgfopts@list@add@b@toks=\toks38
 )
-\c@cnltx@tmpa=\count163
-\c@cnltx@tmpb=\count164
-\c@cnltx@tmpc=\count165
+\c@cnltx@tmpa=\count165
+\c@cnltx@tmpb=\count166
+\c@cnltx@tmpc=\count167
 \cnltx@tmpa@length=\skip57
 \cnltx@tmpb@length=\skip58
 \cnltx@tmpc@length=\skip59
@@ -854,21 +865,21 @@ y
 Package: xtemplate 2016/05/18 v6512 L3 Experimental prototype document function
 s
 \l__xtemplate_tmp_dim=\dimen171
-\l__xtemplate_tmp_int=\count166
+\l__xtemplate_tmp_int=\count168
 \l__xtemplate_tmp_muskip=\muskip18
 \l__xtemplate_tmp_skip=\skip60
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 )
 Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
-\l__tasks_depth_int=\count167
-\g__tasks_int=\count168
-\g__tasks_total_items_int=\count169
-\l__tasks_columns_int=\count170
-\l__tasks_rows_int=\count171
-\g__tasks_current_col_num_int=\count172
-\g__tasks_current_row_num_int=\count173
-\l__tasks_item_columns_int=\count174
+\l__tasks_depth_int=\count169
+\g__tasks_int=\count170
+\g__tasks_total_items_int=\count171
+\l__tasks_columns_int=\count172
+\l__tasks_rows_int=\count173
+\g__tasks_current_col_num_int=\count174
+\g__tasks_current_row_num_int=\count175
+\l__tasks_item_columns_int=\count176
 \l__tasks_item_indent_dim=\dimen172
 \l__tasks_item_default_indent_dim=\dimen173
 \l__tasks_item_width_dim=\dimen174
@@ -883,9 +894,9 @@ Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
 \l__tasks_after_list_skip=\skip64
 \l__tasks_item_coffin=\box49
 \l__tasks_label_coffin=\box50
-\c@task=\count175
-\l__tasks_tmpa_int=\count176
-\l__tasks_tmpb_int=\count177
+\c@task=\count177
+\l__tasks_tmpa_int=\count178
+\l__tasks_tmpb_int=\count179
 \l__tasks_tmpa_coffin=\box51
 .................................................
 . xtemplate info: "declare-object-type"
@@ -933,28 +944,119 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip66
 \LTpre=\skip67
 \LTpost=\skip68
-\LTchunksize=\count178
+\LTchunksize=\count180
 \LTcapwidth=\dimen184
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
-\LT@cols=\count179
-\LT@rows=\count180
-\c@LT@tables=\count181
-\c@LT@chunks=\count182
+\LT@cols=\count181
+\LT@rows=\count182
+\c@LT@tables=\count183
+\c@LT@chunks=\count184
 \LT@p@ftn=\toks39
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen185
+\lightrulewidth=\dimen186
+\cmidrulewidth=\dimen187
+\belowrulesep=\dimen188
+\belowbottomsep=\dimen189
+\aboverulesep=\dimen190
+\abovetopsep=\dimen191
+\cmidrulesep=\dimen192
+\cmidrulekern=\dimen193
+\defaultaddspace=\dimen194
+\@cmidla=\count185
+\@cmidlb=\count186
+\@aboverulesep=\dimen195
+\@belowrulesep=\dimen196
+\@thisruleclass=\count187
+\@lastruleclass=\count188
+\@thisrulewidth=\dimen197
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen198
+\extrarowheight=\dimen199
+\NC@list=\toks40
+\extratabsurround=\skip69
+\backup@length=\skip70
+)
+\TX@col@width=\dimen256
+\TX@old@table=\dimen257
+\TX@old@col=\dimen258
+\TX@target=\dimen259
+\TX@delta=\dimen260
+\TX@cols=\count189
+\TX@ftn=\toks41
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen261
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count190
+\mult@box=\box56
+\multicol@leftmargin=\dimen262
+\c@unbalance=\count191
+\c@collectmore=\count192
+\doublecol@number=\count193
+\multicoltolerance=\count194
+\multicolpretolerance=\count195
+\full@width=\dimen263
+\page@free=\dimen264
+\premulticols=\dimen265
+\postmulticols=\dimen266
+\multicolsep=\skip71
+\multicolbaselineskip=\skip72
+\partial@page=\box57
+\last@line=\box58
+\maxbalancingoverflow=\dimen267
+\mult@rightbox=\box59
+\mult@grightbox=\box60
+\mult@gfirstbox=\box61
+\mult@firstbox=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\c@columnbadness=\count196
+\c@finalcolumnbadness=\count197
+\last@try=\dimen268
+\multicolovershoot=\dimen269
+\multicolundershoot=\dimen270
+\mult@nat@firstbox=\box80
+\colbreak@box=\box81
+\mc@col@check@num=\count198
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip69
-\f@ncyO@elh=\skip70
-\f@ncyO@erh=\skip71
-\f@ncyO@olh=\skip72
-\f@ncyO@orh=\skip73
-\f@ncyO@elf=\skip74
-\f@ncyO@erf=\skip75
-\f@ncyO@olf=\skip76
-\f@ncyO@orf=\skip77
+\fancy@headwidth=\skip73
+\f@ncyO@elh=\skip74
+\f@ncyO@erh=\skip75
+\f@ncyO@olh=\skip76
+\f@ncyO@orh=\skip77
+\f@ncyO@elf=\skip78
+\f@ncyO@erf=\skip79
+\f@ncyO@olf=\skip80
+\f@ncyO@orf=\skip81
 )
 (./Derivadas.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -962,20 +1064,20 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `Derivadas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1011,40 +1113,40 @@ LaTeX Font Info:    ... okay on input line 103.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 103.
+\AtBeginShipoutBox=\box82
+Package hyperref Info: Link coloring OFF on input line 123.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count183
+\c@section@level=\count199
 )
-LaTeX Info: Redefining \ref on input line 103.
-LaTeX Info: Redefining \pageref on input line 103.
-LaTeX Info: Redefining \nameref on input line 103.
+LaTeX Info: Redefining \ref on input line 123.
+LaTeX Info: Redefining \pageref on input line 123.
+LaTeX Info: Redefining \nameref on input line 123.
 
 (./Derivadas.out) (./Derivadas.out)
 \@outlinefile=\write3
 \openout3 = `Derivadas.out'.
 
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
+LaTeX Info: Redefining \. on input line 123.
+LaTeX Info: Redefining \% on input line 123.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count184
-\scratchdimen=\dimen185
-\scratchbox=\box57
-\nofMPsegments=\count185
-\nofMParguments=\count186
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count187
-\MPscratchDim=\dimen186
-\MPnumerator=\count188
-\makeMPintoPDFobject=\count189
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count266
+\scratchdimen=\dimen271
+\scratchbox=\box83
+\nofMPsegments=\count267
+\nofMParguments=\count268
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count269
+\MPscratchDim=\dimen272
+\MPnumerator=\count270
+\makeMPintoPDFobject=\count271
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1060,7 +1162,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count190
+\c@lstlisting=\count272
 
 [1
 
@@ -1088,104 +1190,79 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 \clearpage
+l.154 \clearpage
                  [1
+
+] [2
+
 
 ]
 Cap\'{\i }tulo 1.
-[2
-
-
-]
-Overfull \hbox (8.41464pt too wide) in paragraph at lines 156--161
-[]\T1/cmr/m/n/12 ksjgd ds ja gsiasdshd-si dsdsjdvsjdvsdnsvdms ksjgd ds ja gsias
-dshd-si dsdsjdvsjdvsdnsvdms
- []
-
-
-Overfull \hbox (5.80415pt too wide) in paragraph at lines 156--161
-\T1/cmr/m/n/12 ksjgd ds ja gsiasdshd-si dsdsjdvsjdvsdnsvdmsksjgd ds ja gsiasdsh
-d-si dsdsjdvsjdvsdnsvdms
- []
-
-
-Overfull \hbox (8.41464pt too wide) in paragraph at lines 156--161
-\T1/cmr/m/n/12 ksjgd ds ja gsiasdshd-si dsdsjdvsjdvsdnsvdms ksjgd ds ja gsiasds
-hd-si dsdsjdvsjdvsdnsvdms
- []
-
-
-Overfull \hbox (8.41464pt too wide) in paragraph at lines 156--161
-\T1/cmr/m/n/12 ksjgd ds ja gsiasdshd-si dsdsjdvsjdvsdnsvdms ksjgd ds ja gsiasds
-hd-si dsdsjdvsjdvsdnsvdms
- []
-
-
-Overfull \hbox (26.10059pt too wide) in paragraph at lines 156--161
-\T1/cmr/m/n/12 ksjgd ds ja gsiasdshd-si dsdsjdvsjdvsdnsvdms ksjgd ds ja gsiasds
-hd-si dsdsjdvsjdvsdnsvdmssdb 
- []
-
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
 [3
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 181.
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+ [4
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 186.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
- [4
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
+ [5
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 
 (./Derivadas.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
-Package rerunfilecheck Info: File `Derivadas.out' has not changed.
-(rerunfilecheck)             Checksum: 57B045CC05CDCC9D31EDBE6BBAF05C7E;167.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+
+
+Package rerunfilecheck Warning: File `Derivadas.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Derivadas.out':
+(rerunfilecheck)             Before: 5A4CECC3B78FF333CF4534F16E69DE70;103
+(rerunfilecheck)             After:  249EC4575AC91A6939E2857D2E14E58C;171.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 18703 strings out of 493014
- 319553 string characters out of 6133351
- 395769 words of memory out of 5000000
- 22010 multiletter control sequences out of 15000+600000
+ 19064 strings out of 493014
+ 324738 string characters out of 6133351
+ 403548 words of memory out of 5000000
+ 22344 multiletter control sequences out of 15000+600000
  21569 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,12n,52p,10487b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Derivadas.pdf (5 pages, 188204 bytes).
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on Derivadas.pdf (6 pages, 142593 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 106 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

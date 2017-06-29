@@ -1,4 +1,4 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Funciones}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Definici\IeC {\'o}n}{3}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Miniseccion}{3}{subsection.1.1.1}
+\contentsline {part}{I\hspace {1em}First Part of this document}{2}{part.1}
+\contentsline {chapter}{\numberline {1}Funciones}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Definici\IeC {\'o}n}{4}{section.1.1}
