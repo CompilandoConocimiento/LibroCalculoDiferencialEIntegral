@@ -4,7 +4,6 @@
 
 
 
-
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
@@ -13,6 +12,7 @@
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
     \author{Oscar Andrés Rosas}                                     %Who I am
 
@@ -90,12 +90,13 @@
     \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
     {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
     {\end{footnotesize}\end{adjustwidth}}                           %that's it
-        
+
+
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
-    \newcommand \Also {\Space \text{y} \Space}                      %Use: \Also so it's look cool
+    \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
     \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
 
     \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
@@ -132,6 +133,7 @@
 
     % === LINEAL ALGEBRA & VECTORS ===
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
 
     \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
         \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
@@ -156,13 +158,67 @@
     \makeatother                                                    %WTF! IS THIS
 
     % TRIGONOMETRIC FUNCTIONS
-    \newcommand{\Cos}[1]{\cos\Wrap{#1}}
-    \newcommand{\Sin}[1]{\sin\Wrap{#1}}
+    \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
 
     % === COMPLEX ANALYSIS ===
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
     \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
+    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
 
+    % === CALCULUS ===
+    \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
+    \newcommand \Derivate[2]                                        %Complete Derivate -- [f(x)][x]
+        {\dfrac{d \; #1}{d #2}}                                     %Use: \Partial for simple use
+    
+    \newcommand \MiniUpperDerivate[2]                               %Mini Derivate High Orden Derivate -- [x][1]
+        {\dfrac{d^{#2}}{d#1^{#2}}}                                  %Mini Derivate High Orden Derivate
+    \newcommand \UpperDerivate[3]                                   %Complete High Orden Derivate -- [f(x)][x][1]
+        {\dfrac{d^{#3} \; #1}{d#2^{#3}}}                            %Use: \UpperDerivate for simple use
+    
+    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}} %Use: \MiniDerivate for simple use
+    \newcommand \Partial[2]                                        %Complete Derivate -- [f(x)][x]
+        {\dfrac{\partial \; #1}{\partial #2}}                      %Use: \Partial for simple use
+    
+    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][1] 
+        {\dfrac{\partial^{#2}}{\partial #1^{#2}}}                   %Mini Derivate High Orden Derivate
+    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][1]
+        {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
+
+
+    % =====  GENERAL COLOR  =========
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
+    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
+    \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
+    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
+    \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
+
+    \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
+        \leavevmode\color{#1}\ignorespaces}                         %That's is!
+
+
+    % =====  CODE EDITOR =========
+    \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
+        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
+        basicstyle=\tiny\color{white},                              %Font color
+        commentstyle=\color{BlueGrey100MD},                         %Comment color
+        stringstyle=\color{TealMD},                                 %String color
+        keywordstyle=\color{Green100MD},                            %keywords color
+        numberstyle=\tiny\color{TealMD},                            %Size of a number
+        frame=shadowbox,                                            %Adds a frame around the code
+        breakatwhitespace=true,                                     %Style                       
+        breaklines=true,                                            %Style                   
+        keepspaces=true,                                            %Style                   
+        numbers=left,                                               %Style                   
+        numbersep=10pt,                                             %Style 
+        xleftmargin=\parindent,                                     %Style 
+        tabsize=4                                                   %Style 
+    }
+ 
+    \lstset{style=CompilandoStyle}                                  %Use this style
 
 
 % =====================================================
@@ -285,7 +341,151 @@
 
 
 
+    % ======================================================================================
+    % ===========================         LIMITES                 ==========================
+    % ======================================================================================
+    \chapter{Límites}
+        \clearpage
 
+        % =====================================================
+        % ==========    DEFINICION Y BASES           ==========
+        % =====================================================
+        \section{Límites Interesantes}
+
+            % ==================================
+            % =========   FORMAL     ===========
+            % ==================================
+            \subsection{$\lim_{x \to 0} \dfrac{\Sin{x}}{x}$}
+
+                Esta es una de los dos límites más importantes en matemáticas, una de las claves para 
+                resolver problemas y sobretodo para construir el concepto de derivadas.
+
+
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración}:
+                    
+                    Para esta demostración tendré que volver a hacer dibujitos, porque tengo que
+                    probar que para $x \in (0, \frac{\pi}{2})$ tenemos que:
+
+                    \includegraphics[width=0.40\textwidth]{LimSinx}
+                    
+
+                    Sea $x$ el angulo entre $BOA$
+
+                    Primero supongamos que $OC = OA = 1$. Ahora, el camino mas corto de
+                    $C$ a $OA$ es $CE$ que es $\Sin{x}$, pero otro camino es la longitud de
+                    arco $CA$ que mide $x$ en radianes.
+
+                    Entonces $\Sin{x} < x$.
+
+                    Por otro lado, es obvio que la línea $BA$ es la $tan(x)$ y tenemos que
+                    $\Tan{x} = BA = BD+DA > CD+DA > CA = x > \Sin{x}$.
+
+                    Y ahí esta mi clave $\Sin{x} < x < \Tan{x}$.
+
+                    Ahora si multiplicas todo por $\dfrac{1}{x}$ tenemos que 
+                    $\dfrac{\Sin{x}}{x} < 1 < \dfrac{\Tan{x}}{x}$, por lo tanto 
+                    $\dfrac{\Sin{x}}{x} < 1$.
+
+                    Y como $1 < \dfrac{\tan{x}}{x} = \dfrac{\Sin{x}}{x} \dfrac{1}{\Cos{x}}$
+                    entonces multiplicamos todo por $\Cos{x}$ y tenemos que $\Cos{x} < \Sin{x}{x}$
+
+                    Entonces sabemos que $\Cos{x} < \Sin{x}{x} < 1$, ahora:
+                    \begin{itemize}
+                        \item $\lim_{x \to 0} \Cos{x} = 1$
+                        \item $\lim_{x \to 0} 1 = 1$
+                    \end{itemize}
+
+                    Entonces $\Sin{x}{x}$ queda atrapada entre dos funciones que se aproximan a uno
+                    cuando $x \to 0$, por lo tanto $\lim_{x \to 0} \dfrac{\Sin{x}}{x} = 1$
+                                    
+                \end{SmallIndentation}
+                    
+                
+
+
+            % ==================================
+            % =========   FORMAL     ===========
+            % ==================================
+            \clearpage
+            \subsection{$\lim_{x \to 0} \dfrac{\Cos{x} - 1}{x}$}
+
+                Esta es una de los dos límites más importantes en matemáticas, una de las claves para 
+                resolver problemas y sobretodo para construir el concepto de derivadas.
+
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración}:
+                    \begin{MultiLineEquation*}{3}
+                        \lim_{x \to 0} \dfrac{\Cos{x} - 1}{x}
+                            &= \lim_{x \to 0} \pfrac{\Cos{x} - 1}{x} (1)                            
+                                && \Remember{Multiplicamos por inocente 1}                         \\
+                            &= \lim_{x \to 0} \pfrac{\Cos{x} - 1}{x} \pfrac{\Cos{x}+1}{\Cos{x}+1}   
+                                && \Remember{Transformamos el uno}                                  \\
+                            &= \lim_{x \to 0} \pfrac{(\Cos{x} - 1)(\Cos{x}+1)}{x(\Cos{x}+1)}     
+                                && \Remember{Metemos en la fracción}                                \\
+                            &= \lim_{x \to 0} \pfrac{\Cos{x}^2 - 1}{x(\Cos{x}+1)}                   
+                                && \Remember{Conjugado}                                             \\
+                            &= \lim_{x \to 0} \pfrac{\Sin{x}^2}{x(\Cos{x}+1)}                       
+                                && \Remember{$Pitagoras :\Cos{x}^2 -1 = \Sin{x}^2$}                 \\
+                            &= \lim_{x \to 0} \pfrac{(\Sin{x}^2)x}{x^2(\Cos{x}+1)}                  
+                                && \Remember{Creamos una x arriba y abajo}                          \\
+                            &= \lim_{x \to 0} \pfrac{(\Sin{x}^2)}{x^2}\pfrac{x}{\Cos{x}+1}          
+                                && \Remember{Separamos}                                             \\
+                            &= \lim_{x \to 0} \pfrac{\Sin{x}}{x}^2 \pfrac{x}{\Cos{x}+1}           
+                                && \Remember{Vemos que todo esta al cuadrado}                       \\
+                            &= \lim_{x \to 0} (1)^2 \pfrac{x}{\Cos{x}+1}                            
+                                && \Remember{Recuerda $\lim_{x\to 0} \frac{\Sin{x}}{x} = 0$}        \\
+                            &= (1)^2 \pfrac{0}{\Cos{0}+1}                                           
+                                && \Remember{Ya no hay indeterminaciones}                           \\
+                            &= (1)^2 \pfrac{0}{1+1}                                                 
+                                && \Remember{Algebra}                                               \\
+                            &= (1)^2 (0)                                                            
+                                && \Remember{Todo natural por cero es 0}                            \\
+                            &= 0                                                                    
+                                && \Remember{Tada! :D}                                              \\
+                    \end{MultiLineEquation*}
+                        
+                
+                \end{SmallIndentation}
+
+
+                % ======== GEOMETRICA ========
+                \clearpage
+                \begin{SmallIndentation}[1em]
+                    \textbf{Interpretación Geométrica}:
+
+
+                    Este problema es muy importante porque con el podemos demostrar gran cantidad
+                    de identidades, pero más que eso, también tiene una muy bonita interpretación
+                    geométrica
+
+                    \begin{figure}[h]
+                        \centering
+                        \includegraphics[width=0.45\textwidth]{LimCos-1}
+                        \caption{Interpretación geométrica}
+                    \end{figure}
+
+                    Para enteder porque nuestro límite da eso, lo que tenemos que ver es
+                    que podemos imaginar un circulo de radio uno, de tal manera, que si pusieramos
+                    un triangulo rectangulo con un vertice en el origen y el otro tocando a la
+                    circunferencia lo que pasaría sería que el otro lado mediría $\Cos{\theta}$
+
+                    Y el espacio que le faltaría a ese vértice para tocar a la circunferencia es
+                    $1-\Cos{\theta}$.
+
+                    Lo que en realidad hacemos al momento de tomar el límite cuando $\theta \to 0$
+                    es ver que pasa con esa distancia que le falta cuando la longitud de arco
+                    de va haciendo más y más pequeña.
+
+                    Y esta claro que mientras más pequeña sea la longitud de arco más pequeño será ese
+                    espacio, de hecho podemos hacer que ese espacio se acerqué todo lo que queramos
+                    a cero.  
+                
+                \end{SmallIndentation}
+                    
+                    
 
 
 
