@@ -447,7 +447,7 @@
     \vspace                                                         %Give some space
     \baselineskip                                                   %But we need this to up command
     
-    {\large \textsf{Julio 2018}}                                    %Date
+    {\large \textsf{Agosto 2018}}                                   %Date
 
 \end{titlepage}
 
@@ -514,6 +514,248 @@
     \end{flushright}
 
 
+
+
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% ////////////////////////////////////////        LOS REALES         /////////////////////////////////////////////////
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{Los Reales}
+
+    % ======================================================================================
+    % ===================        CONOZCAMOS A LOS REALES           =========================
+    % ======================================================================================
+    \chapter{Conozcamos a los Reales}
+        \clearpage
+
+        % =====================================================
+        % ==========    AXIOMAS DE LOS REALES        ==========
+        % =====================================================
+        \section{Axiomas de los Reales (en este libro)}
+
+            Recuerda, para poder jugar con las matemáticas lo primero que tenemos que hacer
+            es encontrar definir cuales serán los axiomas que vamos a usar, cuales son las
+            proposiones que vamos a tomar como ciertas.
+
+            Siendo formales los Reales son una tupla $(\Reals, +, \cdot)$, donde tenemos que:
+            
+            \begin{SmallIndentation}[1em]
+                
+                \begin{itemize}
+                    \item
+                        \textbf{"Suma de Reales": $+: (\Reals \times  \Reals) \to \Reals$}
+
+                        Una función $+: (\Reals \times  \Reals) \to \Reals$, es decir, es una función
+                        que recibe dos elementos de $\Reals$ (o más específico un par ordenado de reales) y te
+                        regresa un nuevo elemento de $\Reals$.
+
+                        Gracias a esto podemos decir que es cerrado en esta operación, es decir:
+
+                        $\forall a, b \in \Reals, \MiniSpace (a + b) \in \Reals$  
+
+                    \item
+                        \textbf{"Producto Escalar": $\cdot: (\Reals \times  \Reals) \to \Reals$}
+
+                        Una función $\cdot: (\Reals \times  \Reals) \to \Reals$, es decir, es una función
+                        que recibe dos elementos de $\Reals$
+                        (o más específico un par ordenado) y te regresa un nuevo elemento de $\Reals$.
+
+                        Gracias a esto podemos decir que es cerrado en esta operación, es decir:
+
+                        $\forall a, b \in \Reals, \MiniSpace a \cdot b \in \Reals$  
+
+                \end{itemize}
+            
+            \end{SmallIndentation}
+
+
+            % ==============================================
+            % ====        AXIOMAS DE OPERACIONES        ====
+            % ==============================================
+            \subsection{Axiomas de Operaciones}
+
+                La tupla $(\Reals, +, \cdot)$ tiene que cumplir las siguientes
+                propiedades:
+
+                \begin{SmallIndentation}[1em]
+
+                    \begin{enumerate}
+                    
+                        \item 
+                            \textbf{Ley Aditiva Asociativa:}
+                            $\forall a, b, c \in \Reals, \MiniSpace
+                                (a + b) + c = a + (b + c)$
+
+                        \item 
+                            \textbf{Ley Aditiva Conmutativa:}
+                            $\forall a, b \in \Reals, \MiniSpace
+                                    a + b = b + a$
+
+                        \item 
+                            \textbf{Elemento Indentidad Aditivo:}
+                            $\exists 0 \in \Reals, \MiniSpace
+                                \forall a \in \Reals, \MiniSpace 0 + a = a$
+
+                        \item 
+                            \textbf{Existen Inversos Aditivos:}
+                            $\forall a \in \Reals, \MiniSpace
+                                    \exists -a \in \Reals, \MiniSpace
+                                        a + (-a) = 0$
+
+                        \item 
+                            \textbf{Ley Multiplicativa Conmutativa:}
+                            $\forall a, b \in \Reals, \MiniSpace
+                                    ab = ba$
+
+                        \item 
+                            \textbf{Ley Aditiva Asociativa:}
+                            $\forall a, b, c \in \Reals, \MiniSpace
+                                (ab)c = a(bc)$
+
+                        \item 
+                            \textbf{Elemento Indentidad Multiplicativo:}
+                            $\exists 1 \in \Reals, \MiniSpace
+                                \forall a \in \Reals, \MiniSpace 1 \cdot a = a$
+
+                        \item 
+                            \textbf{Existen Inversos Multiplicativos:}
+                            $\forall a \in \Reals, \MiniSpace
+                                    \exists \dfrac{1}{a} \in \Reals, \MiniSpace
+                                        a \dfrac{1}{a} = 1$
+
+                        \item 
+                            \textbf{Distributiva:}
+                            $\forall a, b, c \in \Reals, \MiniSpace
+                                    a(b + c) = ab + ac \Also (a + b)c = ac + bc$
+
+                    \end{enumerate}
+
+                \end{SmallIndentation}
+
+            % =============================================
+            % ============     PROPIEDADES      ===========
+            % =============================================
+            \clearpage
+            \subsection{Consecuencias y Propiedades}
+
+                Veamos algunas de las Propiedades de esto que acabamos de definir, son consecuencias de los 
+                axiomas.
+
+                \begin{itemize}
+
+                    \item \textbf{Cancelación de la Suma Vectorial}:\\
+                        Si $x, y, z \in \Reals$ tal que $x + z = y + z$, entonces $x = y$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Esto es algo bastante natural e intuitivo, pero aun así hay que demostrarlo, 
+                            \begin{align*}
+                                x + z &= y + z                  \\
+                                x + z + (-z) &= y + z + (-z)    \\
+                                x + 0 &= y + 0                  \\
+                                x &= y                          
+                            \end{align*}
+
+                        \end{SmallIndentation}
+
+
+                    \item El $0$ es único.
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Si te das cuenta, nunca dije que tenia que existir solo un $0$ pues no es
+                            necesario, ya que podemos decir que si tenemos otro $0_2$ entonces pasará que 
+                            $\exists 0_2 \in \VectorSet, \MiniSpace
+                                \forall a \in \VectorSet, \MiniSpace
+                                    0_2 + a = a + 0_2 = a$
+
+                            Podemos decir entonces que $0 = 0+0_2$ pero también sabemos como
+                            funciona el $0$, así que $0 = 0+0_2 = 0_2$.
+
+                            Es decir, si algo cumple con querer ser nuestro cero, veremos que es de hecho
+                            el mismo elemento.
+
+                        \end{SmallIndentation}
+
+                    \item El inverso aditivo de $a$ es único.
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Podemos entonces suponer que hay dos reales $x, y$ que hacen el 
+                            trabajo de un inverso de $a$, es decir
+                            $a + x = x + a = 0$ y que 
+                            $a + y = y + a = 0$.
+
+                            De ser así vemos entonces que podemos decir que:
+                            \begin{align*}
+                                x 
+                                    &= x + 0          &&\Remember{Suma de cero}   \\
+                                    &= x + (a + y)    &&\Remember{Hipotesis}      \\
+                                    &= (x + a) + y    &&\Remember{Asociativa}     \\
+                                    &= 0 + y          &&\Remember{Suma de Cero}   \\
+                                    &= y              &&\Remember{Hipotesis}   
+                            \end{align*}
+
+                        \end{SmallIndentation}
+
+                    \clearpage
+
+
+                    \item $\forall \alpha \in \Reals, \MiniSpace \alpha \cdot 0 = 0$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Esto es algo bastante natural e intuitivo, pero aun así hay que demostrarlo, 
+                            veamos que $\alpha \cdot 0$ es un vector, vamos vamos a denotar su inverso
+                            adivito como $- (\alpha \cdot 0)$
+                            \begin{align*}
+                                \alpha \cdot 0 
+                                    &= (\alpha \cdot 0) + 0                             \\
+                                    &= \alpha \cdot 0 + [ (\alpha 0) - (\alpha 0) ]     \\
+                                    &= [\alpha \cdot 0 +  (\alpha 0)] - (\alpha 0)      \\
+                                    &= [\alpha (0 + 0)] - (\alpha 0)                    \\
+                                    &= \alpha 0 - (\alpha 0)                            \\
+                                    &= 0   
+                            \end{align*}
+
+                        \end{SmallIndentation}
+
+                 \end{itemize}
+
+
+
+
+        % =====================================================
+        % ==========      TRICOTOMIA Y ORDEN         ==========
+        % =====================================================
+        \clearpage
+        \section{Tricotomia y Orden}
+
+            Vamos a igual suponer como axioma la siguiente afirmación:
+
+            Para todo $a, b \in \Reals$ pasa una y solo una de las siguientes cosas:
+
+            \begin{itemize}
+                \item $a < b$
+                \item $b < a$
+                \item $a = b$
+            \end{itemize}
+
+
+            Gracias a esta idea podemos dividir a los reales en tres conjuntos excluyentes:
+            \begin{itemize}
+                \item $Positivos = \Set{x \Such x > 0}$
+                \item $Cero = \Set{0}$
+                \item $Negativos = \Set{x \Such x < 0}$
+            \end{itemize}
+            
 
 
 
