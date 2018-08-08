@@ -532,46 +532,45 @@
         % =====================================================
         \section{Axiomas de los Reales (en este libro)}
 
-            Recuerda, para poder jugar con las matemáticas lo primero que tenemos que hacer
-            es encontrar definir cuales serán los axiomas que vamos a usar, cuales son las
-            proposiones que vamos a tomar como ciertas.
-
-            Siendo formales los Reales son una tupla $(\Reals, +, \cdot)$, donde tenemos que:
-            
-            \begin{SmallIndentation}[1em]
-                
-                \begin{itemize}
-                    \item
-                        \textbf{"Suma de Reales": $+: (\Reals \times  \Reals) \to \Reals$}
-
-                        Una función $+: (\Reals \times  \Reals) \to \Reals$, es decir, es una función
-                        que recibe dos elementos de $\Reals$ (o más específico un par ordenado de reales) y te
-                        regresa un nuevo elemento de $\Reals$.
-
-                        Gracias a esto podemos decir que es cerrado en esta operación, es decir:
-
-                        $\forall a, b \in \Reals, \MiniSpace (a + b) \in \Reals$  
-
-                    \item
-                        \textbf{"Producto Escalar": $\cdot: (\Reals \times  \Reals) \to \Reals$}
-
-                        Una función $\cdot: (\Reals \times  \Reals) \to \Reals$, es decir, es una función
-                        que recibe dos elementos de $\Reals$
-                        (o más específico un par ordenado) y te regresa un nuevo elemento de $\Reals$.
-
-                        Gracias a esto podemos decir que es cerrado en esta operación, es decir:
-
-                        $\forall a, b \in \Reals, \MiniSpace a \cdot b \in \Reals$  
-
-                \end{itemize}
-            
-            \end{SmallIndentation}
-
-
             % ==============================================
             % ====        AXIOMAS DE OPERACIONES        ====
             % ==============================================
             \subsection{Axiomas de Operaciones}
+
+                Recuerda, para poder jugar con las matemáticas lo primero que tenemos que hacer
+                es encontrar definir cuales serán los axiomas que vamos a usar, cuales son las
+                proposiones que vamos a tomar como ciertas.
+
+                Siendo formales los Reales son una tupla $(\Reals, +, \cdot)$, donde tenemos que:
+                
+                \begin{SmallIndentation}[1em]
+                    
+                    \begin{itemize}
+                        \item
+                            \textbf{"Suma de Reales": $+: (\Reals \times  \Reals) \to \Reals$}
+
+                            Una función $+: (\Reals \times  \Reals) \to \Reals$, es decir, es una función
+                            que recibe dos elementos de $\Reals$ (o más específico un par ordenado de reales) y te
+                            regresa un nuevo elemento de $\Reals$.
+
+                            Gracias a esto podemos decir que es cerrado en esta operación, es decir:
+
+                            $\forall a, b \in \Reals, \MiniSpace (a + b) \in \Reals$  
+
+                        \item
+                            \textbf{"Producto Escalar": $\cdot: (\Reals \times  \Reals) \to \Reals$}
+
+                            Una función $\cdot: (\Reals \times  \Reals) \to \Reals$, es decir, es una función
+                            que recibe dos elementos de $\Reals$
+                            (o más específico un par ordenado) y te regresa un nuevo elemento de $\Reals$.
+
+                            Gracias a esto podemos decir que es cerrado en esta operación, es decir:
+
+                            $\forall a, b \in \Reals, \MiniSpace a \cdot b \in \Reals$  
+
+                    \end{itemize}
+                
+                \end{SmallIndentation}
 
                 La tupla $(\Reals, +, \cdot)$ tiene que cumplir las siguientes
                 propiedades:
@@ -631,6 +630,31 @@
 
                 \end{SmallIndentation}
 
+
+            % =====================================================
+            % ==========      TRICOTOMIA Y ORDEN         ==========
+            % =====================================================
+            \clearpage
+            \subsection{Tricotomia y Orden}
+
+                Vamos a igual suponer como axioma la siguiente afirmación:
+
+                Para todo $a, b \in \Reals$ pasa una y solo una de las siguientes cosas:
+
+                \begin{itemize}
+                    \item $a < b$
+                    \item $b < a$
+                    \item $a = b$
+                \end{itemize}
+
+
+                Gracias a esta idea podemos dividir a los reales en tres conjuntos excluyentes:
+                \begin{itemize}
+                    \item $Positivos = \Set{x \Such x > 0}$
+                    \item $Cero = \Set{0}$
+                    \item $Negativos = \Set{x \Such x < 0}$
+                \end{itemize}
+
             % =============================================
             % ============     PROPIEDADES      ===========
             % =============================================
@@ -642,7 +666,7 @@
 
                 \begin{itemize}
 
-                    \item \textbf{Cancelación de la Suma Vectorial}:\\
+                    \item Cancelación de la suma: 
                         Si $x, y, z \in \Reals$ tal que $x + z = y + z$, entonces $x = y$
 
                         % ======== DEMOSTRACION ========
@@ -660,7 +684,7 @@
                         \end{SmallIndentation}
 
 
-                    \item El $0$ es único.
+                    \item El neutro aditivo es único
 
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -680,7 +704,7 @@
 
                         \end{SmallIndentation}
 
-                    \item El inverso aditivo de $a$ es único.
+                    \item El inverso aditivo de $a$ es único
 
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -706,55 +730,166 @@
                     \clearpage
 
 
-                    \item $\forall \alpha \in \Reals, \MiniSpace \alpha \cdot 0 = 0$
+                    \item $\forall a \in \Reals, \MiniSpace a \cdot 0 = 0$
 
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
                             \textbf{Demostración}:
 
                             Esto es algo bastante natural e intuitivo, pero aun así hay que demostrarlo, 
-                            veamos que $\alpha \cdot 0$ es un vector, vamos vamos a denotar su inverso
-                            adivito como $- (\alpha \cdot 0)$
                             \begin{align*}
-                                \alpha \cdot 0 
-                                    &= (\alpha \cdot 0) + 0                             \\
-                                    &= \alpha \cdot 0 + [ (\alpha 0) - (\alpha 0) ]     \\
-                                    &= [\alpha \cdot 0 +  (\alpha 0)] - (\alpha 0)      \\
-                                    &= [\alpha (0 + 0)] - (\alpha 0)                    \\
-                                    &= \alpha 0 - (\alpha 0)                            \\
+                                a \cdot 0 
+                                    &= (a \cdot 0) + 0                          \\
+                                    &= a \cdot 0 + [ (a 0) - (a 0) ]            \\
+                                    &= [a \cdot 0 +  (a 0)] - (a 0)             \\
+                                    &= [a (0 + 0)] - (a 0)                      \\
+                                    &= a 0 - (a 0)                              \\
                                     &= 0   
                             \end{align*}
 
                         \end{SmallIndentation}
 
+                    \item $\forall a \in \Reals,  -(-a) = a$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Ahora, vamos a leer lo que nos dice, esta proposión
+                            nos dice que el inverso del inverso de a es a.
+
+                            Osea que $a + (-a) = 0$, pero espera, eso ya lo sabemos
+                            es despúes de todo la definición del inverso aditivo.
+
+                        \end{SmallIndentation}
+
+                    \item $\forall a \in \Reals,  -(-a) = a$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Ahora, vamos a leer lo que nos dice, esta proposión
+                            nos dice que el inverso del inverso de a es a.
+
+                            Osea que $a + (-a) = 0$, pero espera, eso ya lo sabemos
+                            es despúes de todo la definición del inverso aditivo.
+
+                        \end{SmallIndentation}
+
+                    \item $\forall a \in \Reals,  -a = (-1)a$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            Ahora, repito, lo que nos dice eso es que si sumamos
+                            a con $(-1)a$ nos tiene que dar cero.
+
+                            \begin{MultiLineEquation*}{3}
+                                a + (-1)a 
+                                    &= a(1) + (-1)a     &\Remember{Neutro multiplicativo}   \\
+                                    &= a(1) + a(-1)     &\Remember{Conmutativad}            \\
+                                    &= a(1 + -1)        &\Remember{Distributiva}            \\
+                                    &= a(0)             &\Remember{Inverso aditivo}         \\
+                                    &= 0                &\Remember{Neutro aditivo}
+                            \end{MultiLineEquation*}
+
+                            Ahora, como ya demostramos que solo hay un inverso, 
+                            $-a = (-1)a$.
+
+                        \end{SmallIndentation}
+
+                    \clearpage
+
+                                
+                    \item $\forall a \in \Reals,  -a = (-1)a$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            \begin{MultiLineEquation*}{3}
+                                a + (-1)a 
+                                    &= a(1) + (-1)a     &\Remember{Neutro multiplicativo}   \\
+                                    &= a(1) + a(-1)     &\Remember{Conmutativad}            \\
+                                    &= a(1 + -1)        &\Remember{Distributiva}            \\
+                                    &= a(0)             &\Remember{Inverso aditivo}         \\
+                                    &= 0                &\Remember{Neutro aditivo}
+                            \end{MultiLineEquation*}
+                                
+
+                        \end{SmallIndentation}
+
+
+                    \item $\forall a, b \in \Reals, a(-b) = -(ab) = (-a)b$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Idea de la Demostración}:
+
+                            \begin{MultiLineEquation*}{3}
+                                a (-b) 
+                                    &= a(-1)(b) \\
+                                    &= (-1)ab   \\
+                                    &= -ab      \\
+                                    &= -(ab)    \\
+                                    &= (-1)ab   \\
+                                    &= (-a)b
+                            \end{MultiLineEquation*}
+
+                        \end{SmallIndentation}
+
+                    \item $-0 = 0$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Este es sencillo, lo que nos dice es que 
+                            $0 + 0 = 0$ lo cual es obvio por como funciona el
+                            cero                        
+                        \end{SmallIndentation}
+
+                    \item Sea $a, b \in \Reals$ entonces $ab = 0$ si y solo si $a=0$ ó $b=0$
+
+                    \item Sea $ab = ac$ y $a \neq 0$ entonces $b = c$
+
                  \end{itemize}
 
+            
+            % =====================================================
+            % ===       DIVISION E INVERSOS MULTIPLICATIVOS     ===
+            % =====================================================
+            \clearpage
+            \subsection{División e Inversos multiplicativos}
+
+                Tenemos que definir un par de cosas para las siguientes propiedades:
+
+                \begin{itemize}
+                    \item Definimos a $a - b$ como $a + (-b)$
+                    \item Definimos a $\frac{a}{b}$ como $ab^{-1}$ si es que $b \neq = 0$
+                \end{itemize}
 
 
 
-        % =====================================================
-        % ==========      TRICOTOMIA Y ORDEN         ==========
-        % =====================================================
-        \clearpage
-        \section{Tricotomia y Orden}
+            % =============================================
+            % ============     PROPIEDADES      ===========
+            % =============================================
+            \subsection{Consecuencias y Propiedades}
 
-            Vamos a igual suponer como axioma la siguiente afirmación:
+                Veamos algunas de las Propiedades de esto que acabamos de definir, son consecuencias de los 
+                axiomas.
 
-            Para todo $a, b \in \Reals$ pasa una y solo una de las siguientes cosas:
-
-            \begin{itemize}
-                \item $a < b$
-                \item $b < a$
-                \item $a = b$
-            \end{itemize}
+                \begin{itemize}
+                    \item $\dfrac{a}{b} = \dfrac{ac}{bc}$ si $b \neq 0$ y $c \neq 0$
+                    \item $\dfrac{a}{b} \dfrac{c}{d} = \dfrac{ac}{bd}$ si $b \neq 0$ y $d \neq 0$
+                \end{itemize}
 
 
-            Gracias a esta idea podemos dividir a los reales en tres conjuntos excluyentes:
-            \begin{itemize}
-                \item $Positivos = \Set{x \Such x > 0}$
-                \item $Cero = \Set{0}$
-                \item $Negativos = \Set{x \Such x < 0}$
-            \end{itemize}
+
+
+           
             
 
 
