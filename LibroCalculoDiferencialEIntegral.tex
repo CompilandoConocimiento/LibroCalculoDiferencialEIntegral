@@ -631,30 +631,6 @@
                 \end{SmallIndentation}
 
 
-            % =====================================================
-            % ==========      TRICOTOMIA Y ORDEN         ==========
-            % =====================================================
-            \clearpage
-            \subsection{Tricotomia y Orden}
-
-                Vamos a igual suponer como axioma la siguiente afirmación:
-
-                Para todo $a, b \in \Reals$ pasa una y solo una de las siguientes cosas:
-
-                \begin{itemize}
-                    \item $a < b$
-                    \item $b < a$
-                    \item $a = b$
-                \end{itemize}
-
-
-                Gracias a esta idea podemos dividir a los reales en tres conjuntos excluyentes:
-                \begin{itemize}
-                    \item $Positivos = \Set{x \Such x > 0}$
-                    \item $Cero = \Set{0}$
-                    \item $Negativos = \Set{x \Such x < 0}$
-                \end{itemize}
-
             % =============================================
             % ============     PROPIEDADES      ===========
             % =============================================
@@ -690,17 +666,17 @@
                         \begin{SmallIndentation}[1em]
                             \textbf{Demostración}:
 
-                            Si te das cuenta, nunca dije que tenia que existir solo un $0$ pues no es
-                            necesario, ya que podemos decir que si tenemos otro $0_2$ entonces pasará que 
-                            $\exists 0_2 \in \VectorSet, \MiniSpace
-                                \forall a \in \VectorSet, \MiniSpace
-                                    0_2 + a = a + 0_2 = a$
+                            Si te das cuenta, nunca dije que tenia que existir solo un $0$ (osea, cero como nuestro aditivo),
+                            pero no te preocupes, porque no es difícil demostrarlo:
 
-                            Podemos decir entonces que $0 = 0+0_2$ pero también sabemos como
-                            funciona el $0$, así que $0 = 0+0_2 = 0_2$.
-
-                            Es decir, si algo cumple con querer ser nuestro cero, veremos que es de hecho
-                            el mismo elemento.
+                            Si tenemos otro real $0_2$ que es un neutro aditivo $\forall a \in \Reals$, entonces
+                            \begin{MultiLineEquation*}{3}
+                                a + 0_2 &= a        \\
+                                -a + (a + 0_2) &= (-a) + a
+                                (-a + a) + 0_2 &= 0
+                                0 + 0_2 &= 0
+                                0_2 &= 0
+                            \end{MultiLineEquation*}
 
                         \end{SmallIndentation}
 
@@ -746,20 +722,6 @@
                                     &= a 0 - (a 0)                              \\
                                     &= 0   
                             \end{align*}
-
-                        \end{SmallIndentation}
-
-                    \item $\forall a \in \Reals,  -(-a) = a$
-
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Demostración}:
-
-                            Ahora, vamos a leer lo que nos dice, esta proposión
-                            nos dice que el inverso del inverso de a es a.
-
-                            Osea que $a + (-a) = 0$, pero espera, eso ya lo sabemos
-                            es despúes de todo la definición del inverso aditivo.
 
                         \end{SmallIndentation}
 
@@ -858,19 +820,21 @@
                  \end{itemize}
 
             
-            % =====================================================
-            % ===       DIVISION E INVERSOS MULTIPLICATIVOS     ===
-            % =====================================================
-            \clearpage
-            \subsection{División e Inversos multiplicativos}
+        % =====================================================
+        % ============      RESTA Y DIVISIÓN     ==============
+        % =====================================================
+        \clearpage
+        \section{Resta y División}
 
-                Tenemos que definir un par de cosas para las siguientes propiedades:
+            Tenemos que definir un par de cosas para las siguientes propiedades:
 
-                \begin{itemize}
-                    \item Definimos a $a - b$ como $a + (-b)$
-                    \item Definimos a $\frac{a}{b}$ como $ab^{-1}$ si es que $b \neq = 0$
-                \end{itemize}
-
+            \begin{itemize}
+                \item 
+                    Definimos a $a - b := a + (-b)$
+                \item
+                    Definimos a $\frac{a}{b} := ab^{-1}$ si es que $b \neq 0$
+                    porque $0^{-1}$ no existe
+            \end{itemize}
 
 
             % =============================================
@@ -889,10 +853,191 @@
 
 
 
-           
-            
+        % =====================================================
+        % ==========      TRICOTOMIA Y ORDEN         ==========
+        % =====================================================
+        \clearpage
+        \section{Tricotomía y Orden}
+
+            % =============================================
+            % ============     DEFINICION       ===========
+            % =============================================
+            \subsection{Definición}
+
+                Vamos a igual suponer como axioma la siguiente afirmación:
+
+                Sea $P$ un conjunto elemental, compuesto por todos los reales positivos, entonces 
+                para todo $a, b \in \Reals$ pasa una y solo una de las siguientes cosas:
+
+                \begin{itemize}
+                    \item $a \in P$
+                    \item $-a \in P$
+                    \item $a = 0$
+                \end{itemize}
+
+                Ahora es importante ver como se comportan $P$, en especial estos 3 axiomas:
+                \begin{itemize}
+                    \item Es cerrado bajo la suma, es decir $\forall a, b \in P \MiniSpace a + b \in P$
+                    \item Es cerrado bajo la multiplicación, es decir $\forall a, b \in P \MiniSpace ab \in P$
+                \end{itemize}
+
+                Gracias a estas ideas podemos dar las siguientes definiciones:
+                \begin{itemize}
+                    \item $a > b    := a - b \in P$
+                    \item $a < b    := b - a \in P$
+                    \item $a \leq b := a < b $ o $a = b$
+                    \item $a \geq b := a > b $ o $a = b$
+                \end{itemize}
 
 
+            % =============================================
+            % ============     PROPIEDADES      ===========
+            % =============================================
+            \clearpage
+            \subsection{Consecuencias y Propiedades}
+
+                \begin{itemize}
+                    \item Transitividad
+                        Si $a < b$ y $b < c$ entonces $a < c$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Supongamos que $a < b$, entonces por definición $b-a \in P$
+                            y que $b < c$, entonces por definición $c-b \in P$
+                        
+                            Ahora como dijimos, la suma sobre $P$ es cerrada, entonces
+                            $(b-a) + (c-b) \in P$.
+
+                            Ahora veamos que:
+                            \begin{MultiLineEquation*}{3}
+                                (b-a) + (c-b)
+                                    &= b - a + c - b    \\
+                                    &= (b - b) - a + c  \\
+                                    &= - a + c          \\
+                                    &= c - a    
+                            \end{MultiLineEquation*}
+
+                            Por lo tanto $c-a \in P$, es decir $a < c$.
+                                
+                        \end{SmallIndentation}
+
+                    \item Si $a < b$ y $c \in \Reals$ entonces $a+c < b+c$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Sabemos que $ a < b$, es decir por definición $b-a \in P$
+                            Ahora:
+                            \begin{MultiLineEquation*}{3}
+                                b-a
+                                    &= b-a + 0                  \\ 
+                                    &= b-a + (c -c)             \\ 
+                                    &= (b + c) + (-c) + (-a)    \\ 
+                                    &= (b + c) + (-1)c + (-1)a  \\ 
+                                    &= (b + c) + (-1)(c + a)    \\ 
+                                    &= (b + c) + -(c + a)       \\ 
+                            \end{MultiLineEquation*}
+
+                            Entonces $b+c - (c+a) \in P$ o lo que es lo mismo
+                            $a+c < b+c$
+                                
+                        \end{SmallIndentation}
+
+                    \item Si $a < b$ y $c < d$ entonces $a+c < b+d$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Sabemos que $ a < b$, es decir por definición $b-a \in P$
+                            y $d-c \in P$, ahora como es cerrada la suma dentro de $P$
+                            entonces $(b-a) + (d-c) \in P$.
+
+                            Ahora
+                            \begin{MultiLineEquation*}{3}
+                                (b-a) + (d-c)
+                                    &= b -a + d -c          \\ 
+                                    &= (b + d) - (a + c)    \\ 
+                                    &= (b + d) - (a + c)    \\ 
+                            \end{MultiLineEquation*}
+
+                            Por lo tanto $(b + d) - (a + c) \in P$ lo que es lo mismo
+                            $a+c < b+d$
+                                
+                        \end{SmallIndentation}
+
+                    \clearpage
+
+                    \item Si $a < b$ y $c > 0$ entonces $ac < bc$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Como $a < b$ entonces $b-a \in P$
+
+                            Ahora como $c \in P$ y $P$ es cerrado bajo el producto.
+                            Entonces $(b-a)c \in P$, osea $bc -ac \in P$ que es lo
+                            mismo que $ac < bc$
+                                
+                        \end{SmallIndentation}
+
+                    \item Si $a < b$ y $c < 0$ entonces $ac > bc$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Como $a < b$ entonces $b-a \in P$
+
+                            Ahora como $-c \in P$ y $P$ es cerrado bajo el producto.
+                            Entonces $(b-a)(-c) \in P$, osea $ac - bc \in P$ que es lo
+                            mismo que $bc < ac$
+                                
+                        \end{SmallIndentation}
+
+                    \item Si $a \neq 0$ entonces $a^2 > 0$
+                    \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ 
+                                
+                            
+                \end{itemize}
+
+
+
+        % =====================================================
+        % ==========     POTENCIAS Y RAICES          ==========
+        % =====================================================
+        \clearpage
+        \section{Potencias y Raíces}
+
+            % =============================================
+            % ========   FUNCION ABSOLUTO       ===========
+            % =============================================
+            \subsection{Función Absoluto}
+
+                Si $x \in \Reals$ entonces:
+                \begin{MultiLineEquation*}{3}
+                    |x| = 
+                    \begin{cases} 
+                        x & \text{si $x \geq 0$}    \\
+                        -x & \text{si $x < 0$}
+                    \end{cases}
+                \end{MultiLineEquation*}
+                    
+
+
+
+            % =============================================
+            % ============     DEFINICION       ===========
+            % =============================================
+            \vspace{1em}
+            \subsection{Definición}
+
+                Sea $a \in \Reals$ y sea $b = a \cdot a$ entonces
+                $\sqrt{b} := |a|$
 
 
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1126,27 +1271,10 @@
 
 
 
-
-
-
-
-
-
-
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 % //////////////////////////////////       CALCULO DIFERENCIAL       /////////////////////////////////////////////////
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 \part{Cálculo Diferencial}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1253,6 +1381,39 @@
                 \int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx  
             \end{equation}
 
+
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% //////////////////////////////////            CHEAT SHEET          /////////////////////////////////////////////////
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{CheatSeet}
+
+    % ==============================================================
+    % ===============      PROPABILIDAD HARDCORE        ============
+    % ==============================================================
+    \clearpage
+    \chapter{Reales}
+
+        \begin{multicols}{2}
+        \begin{SmallIndentation}[0em]
+
+        % ==============================================================
+        % ===============        TRICONOMIA Y ORDEN         ============
+        % ==============================================================
+        \section{Tricotomía y Orden}
+
+            \begin{itemize}
+                \item 1.13: Transitividad. Si $a < b$ y $b < c$ entonces $a < c$
+                \item 1.14: Si $a < b$ y $c \in \Reals$ entonces $a+c < b+c$
+                \item 1.15: Si $a < b$ y $c < d$ entonces $a+c < b+d$
+                \item 1.16: Si $a < b$ y $c > 0$ entonces $ac < bc$
+                \item 1.17: Si $a < b$ y $c < 0$ entonces $ac > bc$
+                \item 1.18: Si $a < b$ y $c < 0$ entonces $ac > bc$
+                \item 1.19: Si $a \neq 0$ entonces $a^2 > 0$
+                \item 1.20: Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ \end{itemize}
+        
+        
+        \end{SmallIndentation}
+        \end{multicols}
 
 
 
