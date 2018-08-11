@@ -530,7 +530,7 @@
         % =====================================================
         % ==========    AXIOMAS DE LOS REALES        ==========
         % =====================================================
-        \section{Axiomas de los Reales (en este libro)}
+        \section{Axiomas de los Reales}
 
             % ==============================================
             % ====        AXIOMAS DE OPERACIONES        ====
@@ -618,8 +618,8 @@
                         \item 
                             \textbf{Existen Inversos Multiplicativos:}
                             $\forall a \in \Reals, \MiniSpace
-                                    \exists \dfrac{1}{a} \in \Reals, \MiniSpace
-                                        a \dfrac{1}{a} = 1$
+                                    \exists a^{-1} \in \Reals, \MiniSpace
+                                        a a^{-1} = 1$
 
                         \item 
                             \textbf{Distributiva:}
@@ -660,7 +660,7 @@
                         \end{SmallIndentation}
 
 
-                    \item El neutro aditivo es único
+                    \item Unicidad del neutro aditivo: El neutro aditivo es único
 
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -680,7 +680,7 @@
 
                         \end{SmallIndentation}
 
-                    \item El inverso aditivo de $a$ es único
+                    \item Unicidad del inverso aditivo: El inverso aditivo de $a$ es único
 
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -764,26 +764,6 @@
 
                     \clearpage
 
-                                
-                    \item $\forall a \in \Reals,  -a = (-1)a$
-
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Demostración}:
-
-                            \begin{MultiLineEquation*}{3}
-                                a + (-1)a 
-                                    &= a(1) + (-1)a     &\Remember{Neutro multiplicativo}   \\
-                                    &= a(1) + a(-1)     &\Remember{Conmutativad}            \\
-                                    &= a(1 + -1)        &\Remember{Distributiva}            \\
-                                    &= a(0)             &\Remember{Inverso aditivo}         \\
-                                    &= 0                &\Remember{Neutro aditivo}
-                            \end{MultiLineEquation*}
-                                
-
-                        \end{SmallIndentation}
-
-
                     \item $\forall a, b \in \Reals, a(-b) = -(ab) = (-a)b$
 
                         % ======== DEMOSTRACION ========
@@ -816,6 +796,29 @@
                     \item Sea $a, b \in \Reals$ entonces $ab = 0$ si y solo si $a=0$ ó $b=0$
 
                     \item Sea $ab = ac$ y $a \neq 0$ entonces $b = c$
+
+                    \item Sea $(ab)^{-1} = a^{-1}b^{-1}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Sabemos que $ab \in \Reals$ por la cerradura de la multiplicación por lo tanto 
+                            existe un único inverso multiplicativo.
+
+                            Ahora veamos que pasa cuando hacemos:
+                            \begin{MultiLineEquation*}{3}
+                                (ab)(a^{-1})(b^{-1})
+                                    &= (a)(a^{-1})(b^{-1})(b)       \\
+                                    &= (1) (1)                      \\
+                                    &= 1
+                            \end{MultiLineEquation*}
+
+                            Por lo tanto, hace $(a^{-1})(b^{-1})$ hace el trabajo
+                            del inverso, es decir $(ab)^{-1} = a^{-1}b^{-1}$
+                        
+                        \end{SmallIndentation}
+                            
 
                  \end{itemize}
 
@@ -1001,7 +1004,72 @@
 
                     \item Si $a \neq 0$ entonces $a^2 > 0$
                     \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ 
-                                
+
+                    \item Si $a < b$ y $c < d$ entonces $ac < bd$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Contraejemplo}:
+
+                            Sea $a, b, c, d \in \Reals$ y $a < b$ y $c < d$.
+                            Ahora, tomemos en particular $a = -1, b = 1, c = -2, d = 2$
+
+                            Entonces tenemos que se cumple nuestras hipotesis pues
+                            \begin{itemize}
+                                \item $-1 < 1$ pues 
+                                    \begin{MultiLineEquation*}{3}
+                                        1 - (-1)                \Remember{Por definición de $a < b$}                    \\
+                                        &= 1 + -(-1)            \Remember{Por definición de la resta}                   \\
+                                        &= 1 + 1                \Remember{Sabemos que $-(-a) = a \forall a \in \Reals$} \\
+                                        &= 2 
+                                    \end{MultiLineEquation*}
+
+                                    Y sabemos que $2 \in P$ por definición de $P$
+                                \item $-2 < 2$ pues 
+                                    \begin{MultiLineEquation*}{3}
+                                        2 - (-2)                \Remember{Por definición de $a < b$}                    \\
+                                        &= 2 + -(-2)            \Remember{Por definición de la resta}                   \\
+                                        &= 2 + 2                \Remember{Sabemos que $-(-a) = a \forall a \in \Reals$} \\
+                                        &= 4 
+                                    \end{MultiLineEquation*}
+
+                                    Y sabemos que $4 \in P$ por definición de $P$
+                            \end{itemize}
+
+                            Ahora, nota que:
+                            \begin{MultiLineEquation*}{3}
+                                (-1)(-2) 
+                                    &= (-1)(-1)2        \Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
+                                    &= (-1)(-1)2        \Remember{Multiplicación}                                       \\
+                                    &= -(-1)2           \Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
+                                    &= 1(2)             \Remember{Nota que $-(-a) = a \forall a \in \Reals$}            \\
+                                    &= 2                \Remember{Nota que $-(-a) = a \forall a \in \Reals$}  
+                            \end{MultiLineEquation*}
+
+                            La conclusión que tenemos es que $(-1)(-2) < (1)(2)$ que como acabamos de ver es igual
+                            que tener $2 < 1(2)$ que es igual que $2 < 2$, ahora nota que esto es equivalente a decir
+                            que $2 - 2 \in P$ es decir $0 \in P$, pero sabemos por tricotomía $0 \notin P$
+                            
+                        \end{SmallIndentation}
+                    
+                    \item
+                        Si $0 < a < b$ entonces $b^{-1} < a^{-1}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Por hipotesis tenemos que:
+                            \begin{itemize}
+                                \item $0 < a$, por definición esto es $a - 0 \in P$ y por neutro aditivo tenemos que $a \in P$
+                                \item $a < b$, por definición esto es $b - a \in P$
+                                \item $0 < b$, por transitivadad
+                            \end{itemize}
+
+                             
+                        
+                        \end{SmallIndentation}
+                                                                                    
                             
                 \end{itemize}
 
@@ -1038,6 +1106,59 @@
 
                 Sea $a \in \Reals$ y sea $b = a \cdot a$ entonces
                 $\sqrt{b} := |a|$
+
+            % =============================================
+            % ============     PROPIEDADES      ===========
+            % =============================================
+            \vspace{1em}
+            \subsection{Consecuencias y Propiedades}
+
+                Veamos algunas de las propiedades:
+
+                \begin{itemize}
+
+                    \item $a < \sqrt{ab} < \dfrac{a+b}{2} < b$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Idea de Demostración}:
+                            
+                            Nota que $\forall x \in \Reals$, $x^2 \geq 0$, entonces
+                            en particular $x = (\sqrt{a} - \sqrt{b})$.
+
+                            Nos dará que $x^2 = a + b -2\sqrt{ab} \geq 0$, entonces
+                            $\dfrac{a + b}{2} \geq \sqrt{ab}$
+                        
+                        \end{SmallIndentation}
+
+                \end{itemize}
+
+
+
+        % =====================================================
+        % ==========        MAXIMO Y MINIMO          ==========
+        % =====================================================
+        \clearpage
+        \section{Máximo y Mínimo}
+
+            % =============================================
+            % ============     DEFINICION       ===========
+            % =============================================
+            \subsection{Definición}
+
+                El máximo de dos números se representa mediante $max(x, y)$ y el menor de 
+                ellos como $min(x, y)$
+
+            % =============================================
+            % ============     PROPIEDADES      ===========
+            % =============================================
+            \vspace{1em}
+            \subsection{Consecuencias y Propiedades}
+
+                \begin{itemize}
+                    \item $max(x, y) = \dfrac{x+y + |y-x|}{2}$
+                    \item $min(x, y) = \dfrac{x+y - |y-x|}{2}$
+                \end{itemize}
 
 
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
