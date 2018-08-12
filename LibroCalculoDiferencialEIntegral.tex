@@ -1005,6 +1005,64 @@
                     \item Si $a \neq 0$ entonces $a^2 > 0$
                     \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ 
 
+                    \clearpage
+                    \item
+                        Si $0 < a < b$ entonces $b^{-1} < a^{-1}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Ahora, por hipotesís nota que $0 < a$ y por transitividad de $<$ tenemos que
+                            $0 < b$.
+
+                            Ahora, vamos a demostrar una afirmación que vamos a necesitar:\\
+                            \Quote{Si $0< a$ y $a \in \Reals$ entonces $0 < a^{-1}$}
+
+                            % ======== DEMOSTRACION ========
+                            \begin{SmallIndentation}[1.5em]
+                                \textbf{Demostración}:
+                                
+                                Vamos a demostrarlo por contradicción, supongamos que $0 < a$ y
+                                y que $a^{-1} < 0$ ó $a^{-1} = 0$.
+
+                                Ahora, $a^{-1} = 0$ no puede ser porque $a(a^{-1}) = 1$ por definición, pero si 
+                                $a^{-1} = 0$ entonces $1 = a(a^{-1}) = a(0) = 0$ y $1 \neq 0$, por lo tanto
+                                solo queda la opción de que $a^{-1} < 0$.
+
+                                $a^{-1} < 0$ implicaría que $0 - (a^{-1}) \in P$ por definición de $<$, eso implicaría $ -a^{-1} \in P$
+                                por neutro aditivo.
+
+                                Ahora, como $P$ es cerrado bajo el producto entonces si $a (-a^{-1}) \in P$ entonces
+                                $a(-1)a^{-1} \in P$ (porque ya demostramos que $-a = -1(a) \forall a \in \Reals$)
+                                ahora eso implicaría que $a(a^{-1})(-1) \in P$ (usando la conmutatividad de la multiplicación)
+                                que implicaría $(1)(-1) \in P$ (por neutros multiplicativos), lo cual implicaría que $-1 \in P$.
+
+                                Lo cual claramente es falso.
+
+                                Por lo tanto podemos concluir que $0 < a^{-1}$.
+                            
+                            \end{SmallIndentation}
+
+                            Ahora, con esa afirmación ya probada, podemos continuar.
+
+                            Nota que:
+                            \begin{MultiLineEquation*}{3}
+                                a < b      &                            && \Remember{Hipotesis}     \\
+                                    &= (a^{-1})a < b (a^{-1})           
+                                        && \Remember{Multiplicamos por $a^{-1}$, ahora sabemos que $\forall a > 0 \in \Reals a^{-1} > 0$}   \\
+                                    &= 1 < b a^{-1}                     && \Remember{Por definición de inversos multiplicativos}    \\
+                                    &= (b^{-1})1 < b^{-1} b a^{-1}    
+                                        && \Remember{Multiplicamos por $b^{-1}$, ahora sabemos que $\forall b > 0 \in \Reals b^{-1} > 0$}   \\
+                                    &= b^{-1} < b^{-1} b a^{-1}         && \Remember{Por neutro multiplicativo} \\
+                                    &= b^{-1} < (1)a^{-1}               && \Remember{Por definición de inversos multiplicativos}    \\
+                                    &= b^{-1} < a^{-1}                  && \Remember{Por neutro multiplicativo}
+                            \end{MultiLineEquation*}
+
+                            Por lo tanto hemos demostrado que si $a>0$ y $b>0$ y $a<b$ entonces $b^{-1}<a^{-1}$                                
+                        \end{SmallIndentation}
+
+                    \clearpage
                     \item Si $a < b$ y $c < d$ entonces $ac < bd$
 
                         % ======== DEMOSTRACION ========
@@ -1016,59 +1074,40 @@
 
                             Entonces tenemos que se cumple nuestras hipotesis pues
                             \begin{itemize}
-                                \item $-1 < 1$ pues 
-                                    \begin{MultiLineEquation*}{3}
-                                        1 - (-1)                \Remember{Por definición de $a < b$}                    \\
-                                        &= 1 + -(-1)            \Remember{Por definición de la resta}                   \\
-                                        &= 1 + 1                \Remember{Sabemos que $-(-a) = a \forall a \in \Reals$} \\
-                                        &= 2 
-                                    \end{MultiLineEquation*}
+                                
+                                \item $-1 < 1$
 
-                                    Y sabemos que $2 \in P$ por definición de $P$
-                                \item $-2 < 2$ pues 
-                                    \begin{MultiLineEquation*}{3}
-                                        2 - (-2)                \Remember{Por definición de $a < b$}                    \\
-                                        &= 2 + -(-2)            \Remember{Por definición de la resta}                   \\
-                                        &= 2 + 2                \Remember{Sabemos que $-(-a) = a \forall a \in \Reals$} \\
-                                        &= 4 
-                                    \end{MultiLineEquation*}
+                                    Sabemos que $2 \in P$, lo cual implica que $1+1 \in P$,
+                                    ahora sabemos que eso implica que $1 + -(-1) \in P$ (porque ya demostramos que $\forall a \in \Reals a = -(-a)$)
+                                    y eso implica que $1 - (-1) \in P$ (por definición de la resta) lo cual implica que $-1 < 1$ por definición
+                                    de $<$.
 
-                                    Y sabemos que $4 \in P$ por definición de $P$
+
+                                \item $-2 < 2$ 
+
+                                    De manera analoga al punto anterior
+
                             \end{itemize}
 
                             Ahora, nota que:
                             \begin{MultiLineEquation*}{3}
                                 (-1)(-2) 
-                                    &= (-1)(-1)2        \Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
-                                    &= (-1)(-1)2        \Remember{Multiplicación}                                       \\
-                                    &= -(-1)2           \Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
-                                    &= 1(2)             \Remember{Nota que $-(-a) = a \forall a \in \Reals$}            \\
-                                    &= 2                \Remember{Nota que $-(-a) = a \forall a \in \Reals$}  
+                                    &= (-1)(-1)2        &&\Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
+                                    &= (-1)(-1)2        &&\Remember{Multiplicación}                                       \\
+                                    &= -(-1)2           &&\Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
+                                    &= 1(2)             &&\Remember{Nota que $-(-a) = a \forall a \in \Reals$}            \\
+                                    &= 2                &&\Remember{Nota que $-(-a) = a \forall a \in \Reals$}  
                             \end{MultiLineEquation*}
 
                             La conclusión que tenemos es que $(-1)(-2) < (1)(2)$ que como acabamos de ver es igual
                             que tener $2 < 1(2)$ que es igual que $2 < 2$, ahora nota que esto es equivalente a decir
                             que $2 - 2 \in P$ es decir $0 \in P$, pero sabemos por tricotomía $0 \notin P$
+
+                            Por lo cual podemos concluir que este enunciado es falso.
                             
                         \end{SmallIndentation}
                     
-                    \item
-                        Si $0 < a < b$ entonces $b^{-1} < a^{-1}$
-
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Demostración}:
-                            
-                            Por hipotesis tenemos que:
-                            \begin{itemize}
-                                \item $0 < a$, por definición esto es $a - 0 \in P$ y por neutro aditivo tenemos que $a \in P$
-                                \item $a < b$, por definición esto es $b - a \in P$
-                                \item $0 < b$, por transitivadad
-                            \end{itemize}
-
-                             
-                        
-                        \end{SmallIndentation}
+                    
                                                                                     
                             
                 \end{itemize}
