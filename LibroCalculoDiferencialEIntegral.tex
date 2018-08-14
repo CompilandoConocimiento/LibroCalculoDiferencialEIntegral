@@ -835,22 +835,63 @@
                 \item 
                     Definimos a $a - b := a + (-b)$
                 \item
-                    Definimos a $\frac{a}{b} := ab^{-1}$ si es que $b \neq 0$
+                    Definimos a $\dfrac{a}{b} := ab^{-1}$ si es que $b \neq 0$
                     porque $0^{-1}$ no existe
+                \item
+                    Definimos a $a^2 = (a)(a)$
             \end{itemize}
 
 
             % =============================================
             % ============     PROPIEDADES      ===========
             % =============================================
+            \clearpage
             \subsection{Consecuencias y Propiedades}
 
-                Veamos algunas de las Propiedades de esto que acabamos de definir, son consecuencias de los 
+                Veamos algunas de las propiedades de esto que acabamos de definir, son consecuencias de los 
                 axiomas.
 
                 \begin{itemize}
-                    \item $\dfrac{a}{b} = \dfrac{ac}{bc}$ si $b \neq 0$ y $c \neq 0$
-                    \item $\dfrac{a}{b} \dfrac{c}{d} = \dfrac{ac}{bd}$ si $b \neq 0$ y $d \neq 0$
+                    \item $\pfrac{a}{b} \pfrac{c}{d} = \dfrac{ac}{bd}$ si $b \neq 0$ y $d \neq 0$
+                        
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Usando la definición de que $\dfrac{a}{b} = ab^{-1}$
+
+                            Por lo tanto por definición podemos suponer que:
+                            \begin{MultiLineEquation*}{3}
+                                \pfrac{a}{b} \pfrac{c}{d}
+                                    &=          ab^{-1} cd^{-1}             &&\Remember{Por definición}         \\
+                                    & \lLongTo  (ab^{-1})(1) \cdot (1)(cd^{-1})       
+                                        &&\Remember{Por neutro y asociatividad de la multiplicación}            \\
+                                    & \lLongTo  ab^{-1}(c c^{-1}) \cdot cd^{-1}(b b^{-1})       
+                                        &&\Remember{Por inverso y asociatividad de la multiplicación}           \\
+                                    & \lLongTo  ac(b^{-1} c^{-1}) \cdot bc(b^{-1}d^{-1})       
+                                        &&\Remember{Por conmutatividad y asociatividad de la multiplicación}    \\
+                                    & \lLongTo  ac(b b^{-1}) \cdot (cc^{-1})(b^{-1}d^{-1})       
+                                        &&\Remember{Por conmutatividad y asociatividad de la multiplicación}    \\
+                                    & \lLongTo  ac(1) \cdot (1)(b^{-1}d^{-1})       
+                                        &&\Remember{Por inverso multiplicativo}                                 \\
+                                    & \lLongTo  ac(b^{-1}d^{-1})       
+                                        &&\Remember{Por neutro multiplicativo}                                  \\
+                                    & \lLongTo  ac(bd)^{-1}       
+                                        &&\Remember{Teorema visto: $\forall a, b \in \Reals - \Set{0} a^{-1}b^{-1} = (ab)^{-1}$}                                  \\
+                                    & \lLongTo  \dfrac{ac}{bd}
+                                        &&\Remember{Por definición}                                  \\
+                            \end{MultiLineEquation*}
+                                
+                        
+                        \end{SmallIndentation}
+                    
+                    \item $\forall a, b, c, d \in \Reals$ tal que $b \neq 0$ y $d \neq 0$ entonces
+                        $\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad+bc}{bd}$        
+
+                    \item $\forall a, b \in \Reals$ $a^2-b^2 = (a+b)(a-b)$
+
+                    \item $\forall a, b \in \Reals$ Si $a^2 = b^2$ entonces $a=b$ o $a=-b$
+
                 \end{itemize}
 
 
@@ -878,7 +919,7 @@
                     \item $a = 0$
                 \end{itemize}
 
-                Ahora es importante ver como se comportan $P$, en especial estos 3 axiomas:
+                Ahora es importante ver como se comportan $P$, en especial estos 2 axiomas:
                 \begin{itemize}
                     \item Es cerrado bajo la suma, es decir $\forall a, b \in P \MiniSpace a + b \in P$
                     \item Es cerrado bajo la multiplicación, es decir $\forall a, b \in P \MiniSpace ab \in P$
@@ -1003,6 +1044,7 @@
                         \end{SmallIndentation}
 
                     \item Si $a \neq 0$ entonces $a^2 > 0$
+                    
                     \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ 
 
                     \clearpage
@@ -1553,27 +1595,163 @@
     \clearpage
     \chapter{Reales}
 
+
+        % ==============================================================
+        % ===============            AXIOMAS                ============
+        % ==============================================================
+        \section{Axiomas}
+
         \begin{multicols}{2}
-        \begin{SmallIndentation}[0em]
+            \begin{enumerate}
+                \item 
+                    \textbf{Ley Aditiva Asociativa:}
+
+                    $\forall a, b, c \in \Reals, \MiniSpace
+                        (a + b) + c = a + (b + c)$
+
+                \item 
+                    \textbf{Ley Aditiva Conmutativa:}
+
+                    $\forall a, b \in \Reals, \MiniSpace
+                            a + b = b + a$
+
+                \item 
+                    \textbf{Elemento Indentidad Aditivo:}
+
+                    $\exists 0 \in \Reals, \MiniSpace
+                        \forall a \in \Reals, \MiniSpace 0 + a = a$
+
+                \item 
+                    \textbf{Existen Inversos Aditivos:}
+
+                    $\forall a \in \Reals, \MiniSpace
+                            \exists -a \in \Reals, \MiniSpace
+                                a + (-a) = 0$
+
+                \item 
+                    \textbf{Ley Multiplicativa Conmutativa:}
+
+                    $\forall a, b \in \Reals, \MiniSpace
+                            ab = ba$
+
+                \item 
+                    \textbf{Ley Aditiva Asociativa:}
+
+                    $\forall a, b, c \in \Reals, \MiniSpace
+                        (ab)c = a(bc)$
+
+                \item 
+                    \textbf{Elemento Indentidad Multiplicativo:}
+
+                    $\exists 1 \in \Reals, \MiniSpace
+                        \forall a \in \Reals, \MiniSpace 1 \cdot a = a$
+
+                \item 
+                    \textbf{Existen Inversos Multiplicativos:}
+
+                    $\forall a \in \Reals, \MiniSpace
+                            \exists a^{-1} \in \Reals, \MiniSpace
+                                a a^{-1} = 1$
+
+                \item 
+                    \textbf{Distributiva:}
+
+                    $\forall a, b, c \in \Reals, \MiniSpace
+                            a(b + c) = ab + ac \Also (a + b)c = ac + bc$
+
+            \end{enumerate}
+
+            \begin{itemize}
+
+                \item Cancelación de la suma: 
+                    Si $x, y, z \in \Reals$ tal que $x + z = y + z$, entonces $x = y$
+
+                \item El neutro aditivo es único
+
+                \item El inverso aditivo de $a$ es único
+
+                \item $\forall a \in \Reals, \MiniSpace a \cdot 0 = 0$
+
+                \item $\forall a \in \Reals,  -(-a) = a$
+
+                \item $\forall a \in \Reals,  -a = (-1)a$
+
+                \item $\forall a, b \in \Reals, a(-b) = -(ab) = (-a)b$
+
+                \item $-0 = 0$
+
+                \item Sea $a, b \in \Reals$ entonces $ab = 0$ si y solo si $a=0$ ó $b=0$
+
+                \item Sea $ab = ac$ y $a \neq 0$ entonces $b = c$
+
+                \item Sea $(ab)^{-1} = a^{-1}b^{-1}$
+
+            \end{itemize}
+
+        \end{multicols}
+
+        
+        % ==============================================================
+        % ===============         RESTA Y DIVISION          ============
+        % ==============================================================
+        \clearpage
+        \section{Resta y División}
+
+            \begin{itemize}
+                \item 
+                    Definimos a $a - b := a + (-b)$
+                \item
+                    Definimos a $\frac{a}{b} := ab^{-1}$ si es que $b \neq 0$
+                    porque $0^{-1}$ no existe
+            \end{itemize}
+
+            \begin{itemize}
+                \item $\pfrac{a}{b} \pfrac{c}{d} = \dfrac{ac}{bd}$ si $b \neq 0$ y $d \neq 0$
+                    
+                \item $\forall a, b, c, d \in \Reals$ tal que $b \neq 0$ y $d \neq 0$ entonces
+                        $\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad+bc}{bd}$        
+
+                \item $\forall a, b \in \Reals$ $a^2-b^2 = (a+b)(a-b)$
+
+                \item $\forall a, b \in \Reals$ Si $a^2 = b^2$ entonces $a=b$ o $a=-b$
+
+            \end{itemize}
+
 
         % ==============================================================
         % ===============        TRICONOMIA Y ORDEN         ============
         % ==============================================================
+        \clearpage
         \section{Tricotomía y Orden}
 
+            Vamos a igual suponer como axioma la siguiente afirmación:
+
+            Sea $P$ un conjunto elemental, compuesto por todos los reales positivos, entonces 
+            para todo $a, b \in \Reals$ pasa una y solo una de las siguientes cosas:
+
             \begin{itemize}
-                \item 1.13: Transitividad. Si $a < b$ y $b < c$ entonces $a < c$
-                \item 1.14: Si $a < b$ y $c \in \Reals$ entonces $a+c < b+c$
-                \item 1.15: Si $a < b$ y $c < d$ entonces $a+c < b+d$
-                \item 1.16: Si $a < b$ y $c > 0$ entonces $ac < bc$
-                \item 1.17: Si $a < b$ y $c < 0$ entonces $ac > bc$
-                \item 1.18: Si $a < b$ y $c < 0$ entonces $ac > bc$
-                \item 1.19: Si $a \neq 0$ entonces $a^2 > 0$
-                \item 1.20: Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ \end{itemize}
+                \item $a \in P$
+                \item $-a \in P$
+                \item $a = 0$
+            \end{itemize}
+
+            Ahora es importante ver como se comportan $P$, en especial estos 2 axiomas:
+            \begin{itemize}
+                \item Es cerrado bajo la suma, es decir $\forall a, b \in P \MiniSpace a + b \in P$
+                \item Es cerrado bajo la multiplicación, es decir $\forall a, b \in P \MiniSpace ab \in P$
+            \end{itemize}
+
+
+            \begin{itemize}
+                \item Transitividad. Si $a < b$ y $b < c$ entonces $a < c$
+                \item Si $a < b$ y $c \in \Reals$ entonces $a+c < b+c$
+                \item Si $a < b$ y $c < d$ entonces $a+c < b+d$
+                \item Si $a < b$ y $c > 0$ entonces $ac < bc$
+                \item Si $a < b$ y $c < 0$ entonces $ac > bc$
+                \item Si $a \neq 0$ entonces $a^2 > 0$
+                \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$
+            \end{itemize}
         
-        
-        \end{SmallIndentation}
-        \end{multicols}
 
 
 
