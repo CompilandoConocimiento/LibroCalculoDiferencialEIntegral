@@ -1044,7 +1044,7 @@
                         \end{SmallIndentation}
 
                     \item Si $a \neq 0$ entonces $a^2 > 0$
-                    
+
                     \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$ 
 
                     \clearpage
@@ -1104,53 +1104,7 @@
                             Por lo tanto hemos demostrado que si $a>0$ y $b>0$ y $a<b$ entonces $b^{-1}<a^{-1}$                                
                         \end{SmallIndentation}
 
-                    \clearpage
-                    \item Si $a < b$ y $c < d$ entonces $ac < bd$
-
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Contraejemplo}:
-
-                            Sea $a, b, c, d \in \Reals$ y $a < b$ y $c < d$.
-                            Ahora, tomemos en particular $a = -1, b = 1, c = -2, d = 2$
-
-                            Entonces tenemos que se cumple nuestras hipotesis pues
-                            \begin{itemize}
-                                
-                                \item $-1 < 1$
-
-                                    Sabemos que $2 \in P$, lo cual implica que $1+1 \in P$,
-                                    ahora sabemos que eso implica que $1 + -(-1) \in P$ (porque ya demostramos que $\forall a \in \Reals a = -(-a)$)
-                                    y eso implica que $1 - (-1) \in P$ (por definición de la resta) lo cual implica que $-1 < 1$ por definición
-                                    de $<$.
-
-
-                                \item $-2 < 2$ 
-
-                                    De manera analoga al punto anterior
-
-                            \end{itemize}
-
-                            Ahora, nota que:
-                            \begin{MultiLineEquation*}{3}
-                                (-1)(-2) 
-                                    &= (-1)(-1)2        &&\Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
-                                    &= (-1)(-1)2        &&\Remember{Multiplicación}                                       \\
-                                    &= -(-1)2           &&\Remember{Nota que $-a = -1a \forall a \in \Reals$}             \\
-                                    &= 1(2)             &&\Remember{Nota que $-(-a) = a \forall a \in \Reals$}            \\
-                                    &= 2                &&\Remember{Nota que $-(-a) = a \forall a \in \Reals$}  
-                            \end{MultiLineEquation*}
-
-                            La conclusión que tenemos es que $(-1)(-2) < (1)(2)$ que como acabamos de ver es igual
-                            que tener $2 < 1(2)$ que es igual que $2 < 2$, ahora nota que esto es equivalente a decir
-                            que $2 - 2 \in P$ es decir $0 \in P$, pero sabemos por tricotomía $0 \notin P$
-
-                            Por lo cual podemos concluir que este enunciado es falso.
-                            
-                        \end{SmallIndentation}
-                    
-                    
-                                                                                    
+                    \item Si $a < b$ entonces $-a > -b$
                             
                 \end{itemize}
 
@@ -1185,13 +1139,18 @@
             \vspace{1em}
             \subsection{Definición}
 
-                Sea $a \in \Reals$ y sea $b = a \cdot a$ entonces
-                $\sqrt{b} := |a|$
+                Hay 2 formas equivalentes de definirla:
+                \begin{itemize}
+                    \item Sea $a \in \Reals$ y sea $b = a \cdot a$ entonces $\sqrt{b} := |a|$
+                    \item Sea $a, b \in \Reals$ con $b \geq 0$y entonces $\sqrt{a} := b$ si y solo si $a=b^2$
+                 \end{itemize}
+
+
 
             % =============================================
             % ============     PROPIEDADES      ===========
             % =============================================
-            \vspace{1em}
+            \clearpage
             \subsection{Consecuencias y Propiedades}
 
                 Veamos algunas de las propiedades:
@@ -1211,6 +1170,48 @@
                             $\dfrac{a + b}{2} \geq \sqrt{ab}$
                         
                         \end{SmallIndentation}
+
+                    \item $a = (\sqrt{a})^2$
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            De la definición tenemos que:
+                            \begin{MultiLineEquation*}{3}
+                                a 
+                                    &= b^2              \\
+                                    &= \sqrt{a}\sqrt{a} \\
+                                    &= (\sqrt{a})^2     \\
+                            \end{MultiLineEquation*}
+                                
+                        
+                        \end{SmallIndentation}
+                            
+
+                    \item Si $b \geq 0$ entonces $a^2 > b$ si y solo si $a>\sqrt{b}$ o $a<-\sqrt{b}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+
+                            \begin{MultiLineEquation*}{3}
+                                a^2 > b
+                                    &\lLongTo a^2 - b > 0                   \\
+                                    &\lLongTo (a-\sqrt{b})(a+\sqrt{b}) > 0  \\
+                            \end{MultiLineEquation*}
+                            
+                            Ahora, esto quiere decir que:
+                            $a-\sqrt{b} > 0$ y $a + \sqrt{b} > 0$ o 
+                            $a-\sqrt{b} < 0$ y $a + \sqrt{b} < 0$
+
+                            Ahora, de ambos casos de puede deducir.
+                                El regreso es el mismo. 
+                        
+                        \end{SmallIndentation}
+
+                    \item $|a| \geq 0 \forall a \in \Reals$
+                    \item $|a| = 0 \lEqual a = 0$
+                    \item $|a+b| \geq |a| + |b|$
 
                 \end{itemize}
 
@@ -1750,7 +1751,47 @@
                 \item Si $a < b$ y $c < 0$ entonces $ac > bc$
                 \item Si $a \neq 0$ entonces $a^2 > 0$
                 \item Si $0 \leq a < b$ y $0 \leq c < d$ entonces $ac < bd$
+                \item Si $a < b$ entonces $-a > -b$
             \end{itemize}
+
+        % =====================================================
+        % ==========     POTENCIAS Y RAICES          ==========
+        % =====================================================
+        \clearpage
+        \section{Potencias y Raíces}
+
+
+            Si $x \in \Reals$ entonces:
+            \begin{MultiLineEquation*}{3}
+                |x| = 
+                \begin{cases} 
+                    x & \text{si $x \geq 0$}    \\
+                    -x & \text{si $x < 0$}
+                \end{cases}
+            \end{MultiLineEquation*}
+                
+
+            \begin{itemize}
+                \item Sea $a \in \Reals$ y sea $b = a \cdot a$ entonces $\sqrt{b} := |a|$
+                \item Sea $a, b \in \Reals$ con $b \geq 0$y entonces $\sqrt{a} := b$ si y solo si $a=b^2$
+            \end{itemize}
+
+            \begin{itemize}
+
+                \item $a < \sqrt{ab} < \dfrac{a+b}{2} < b$
+
+                \item $a = (\sqrt{a})^2$
+
+                \item Si $b \geq 0$ entonces $a^2 > b$ si y solo si $a>\sqrt{b}$ o $a<-\sqrt{b}$
+
+                \item $|a| \geq 0 \Space \forall a \in \Reals$
+
+                \item $|a| = 0 \lEqual a = 0$
+
+                \item $|a+b| \geq |a| + |b|$
+
+            \end{itemize}
+
         
 
 
